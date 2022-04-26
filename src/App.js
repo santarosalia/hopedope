@@ -1,24 +1,24 @@
 import './App.css';
 
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 const {command} = require('./command');
 
 
 
 function App() {
-  const [response, setResponse] = useState({});
+  // const [response, setResponse] = useState({});
   
 
-  useEffect(() => {
+  // useEffect(() => {
     
-    const NOTION_PAGE_ID = '8195f0adae7846648cb263d59b1c222b';
+  //   const NOTION_PAGE_ID = '8195f0adae7846648cb263d59b1c222b';
     
-    fetch(`https://notion-api.splitbee.io/v1/table/${NOTION_PAGE_ID}`)
-      .then(res => res.json())
-      .then((resJson) => {
-        setResponse(resJson);
-      });
-  }, [])
+  //   fetch(`https://notion-api.splitbee.io/v1/table/8195f0adae7846648cb263d59b1c222b`)
+  //     .then(res => res.json())
+  //     .then((resJson) => {
+  //       setResponse(resJson);
+  //     });
+  // }, [])
   
   return (
     <div className="App">
