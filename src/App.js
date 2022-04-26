@@ -3,7 +3,7 @@ import './App.css';
 import { NotionRenderer } from "react-notion";
 import React, { useState, useEffect } from 'react';
 function App() {
-  const [response, setResponse] = new useState({});
+  const [response, setResponse] = useState({});
   
   useEffect(() => {
     
@@ -32,6 +32,7 @@ function App() {
           <NotionRenderer
           // blockMap={staticResponse}
           blockMap={response}
+          
           fullPage={true}
         />
         </div>
