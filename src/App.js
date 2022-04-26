@@ -4,12 +4,16 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-      <div className='menu'>123</div>
-      <div className='menu'>456</div>
-      <div className='menu'>789</div>
-      <div className='menu'>000</div>
+      <div className='menu'>메뉴1</div>
+      <div className='menu'>메뉴2</div>
+      <div className='menu'>메뉴3</div>
+      <div className='menu'>메뉴4</div>
       </header>
-      <div className='snow-bg'></div>
+      <div className='snow-bg'></div><br></br>
+      <div className='body'>
+        <div className='box'>안녕하세용</div>
+        <div></div>
+      </div>
     </div>
   );
 }
