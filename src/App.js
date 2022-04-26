@@ -4,10 +4,10 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-      <div>123</div>
-      <div>456</div>
-      <div>789</div>
-      <div>000</div>
+      <div className='menu'>123</div>
+      <div className='menu'>456</div>
+      <div className='menu'>789</div>
+      <div className='menu'>000</div>
       </header>
     </div>
   );
