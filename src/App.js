@@ -14,7 +14,7 @@ function App() {
       <div className='body'>
         <div className='box'>안녕하세용</div>
         <div className='comment'>
-          <button onClick={addComment('김동현','안녕하세용','1234')}>추가</button>
+          <button onClick={()=>addComment('김동현','안녕하세용','1234')}>추가</button>
           
         </div>
       </div>
