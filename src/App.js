@@ -1,8 +1,9 @@
 import './App.css';
 const {addComment} = require('./notion');
-
+import { NotionRenderer } from "react-notion";
+import React, { useState, useEffect } from 'react';
 function App() {
-  const [response, setResponse] = useState({});
+  const [response, setResponse] = new useState({});
   
   useEffect(() => {
     
