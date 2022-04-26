@@ -128,7 +128,7 @@ const allComment = async()=>{
     
 }
 
-module.exports = {addComment,checkComment,updateComment,delComment,allComment};
+module.exports = {addComment,checkComment,updateComment,delComment,allComment}
 
 
 // chatId : properties.chatId.title[0].text.content,
