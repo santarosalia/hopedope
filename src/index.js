@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'react-notion-x/src/styles.css'
-import "prismjs/themes/prism-tomorrow.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

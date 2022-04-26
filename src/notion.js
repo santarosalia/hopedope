@@ -1,51 +1,57 @@
 
-const { Client } = require("@notionhq/client")
+const { Client } = require("@notionhq/client");
 
-const notion = new Client({ auth: 'secret_SSm0GTsFvR3oeHvxj7ODvHYIoXNRk7Sd6cO0MsMMVs9' })
-
-const databaseId = '8195f0adae7846648cb263d59b1c222b'
+const notion = new Client({ auth: 'secret_SSm0GTsFvR3oeHvxj7ODvHYIoXNRk7Sd6cO0MsMMVs9' });
+const databaseId = '8195f0adae7846648cb263d59b1c222b';
 
 const addComment = async (name,comment,pw)  => {
     try {
         await notion.pages.create({
-            parent : {database_id: databaseId},
+            
+            parent : {database_id : databaseId},
             properties : {
                 title : {
+                    
                     title: [
                         {   
                             text:{
                             content : name
                         }
+
+
                     }
-                    ]
-                },
-                "comment" : {
-                    rich_text : [
-                        {
-                            text :{
-                                content : comment
-                            }
-                        }
-                    ]
-                },
-                "pw" : {
-                    rich_text : [
-                        {
-                            text :{
-                                content : pw
-                            }
-                        }
-                    ]
-                },
-                "timestamp" : {
-                    rich_text : [
-                        {
-                            text :{
-                                content : new Date().getTime()
-                            }
-                        }
+
                     ]
                 }
+                // ,
+                // "comment" : {
+                //     rich_text : [
+                //         {
+                //             text :{
+                //                 content : comment
+                //             }
+                //         }
+                //     ]
+                // },
+                // "pw" : {
+                //     rich_text : [
+                //         {
+                //             text :{
+                //                 content : pw
+                //             }
+                //         }
+                //     ]
+                // },
+                // "timestamp" : {
+
+                //     rich_text : [
+                //         {
+                //             text :{
+                //                 content : new Date().getTime()
+                //             }
+                //         }
+                //     ]
+                // }
             }     
         }
         )
