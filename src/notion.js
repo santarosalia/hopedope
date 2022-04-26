@@ -1,6 +1,6 @@
 
 const { Client } = require("@notionhq/client")
-const a = 'https://notion-api.splitbee.io/v1/page/8195f0adae7846648cb263d59b1c222b';
+
 const notion = new Client({ auth: 'secret_SSm0GTsFvR3oeHvxj7ODvHYIoXNRk7Sd6cO0MsMMVs9' })
 
 const databaseId = '8195f0adae7846648cb263d59b1c222b'
