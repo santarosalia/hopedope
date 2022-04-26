@@ -1,5 +1,5 @@
 import './App.css';
-const {addComment,checkComment,updateComment,delComment,allComment} = require('./notion');
+const {addComment} = require('./notion');
 
 function App() {
   return (
