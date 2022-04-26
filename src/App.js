@@ -7,9 +7,9 @@ function App() {
   
   useEffect(() => {
     
-    //const NOTION_PAGE_ID = '8195f0adae7846648cb263d59b1c222b';
-    const NOTION_PAGE_ID = 'a4ce6b163985478b808b40a1e1893595';
-    fetch(`https://notion-api.splitbee.io/v1/page/${NOTION_PAGE_ID}`)
+    const NOTION_PAGE_ID = '8195f0adae7846648cb263d59b1c222b';
+    
+    fetch(`https://notion-api.splitbee.io/v1/table/${NOTION_PAGE_ID}`)
       .then(res => res.json())
       .then((resJson) => {
         setResponse(resJson);
