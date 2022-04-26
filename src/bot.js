@@ -2,7 +2,7 @@ const token = process.env.TOKEN;
 
 const Bot = require('node-telegram-bot-api');
 
-const {addMarket,myMarket,checkMarket,delMarket,allPage} = require('./notion');
+
 const request = require('request');
 const { poll } = require('./poll');
 
