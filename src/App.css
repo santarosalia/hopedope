@@ -15,3 +15,18 @@
   
 }
 
+.snow-bg{
+  content:"";
+  display:block;
+  position:absolute;
+  z-index:2;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  pointer-events:none;
+  background-image:url('/public/sakura-1.png'),url('/public/sakura-2.png');
+  -webkit-animation:snow 10s linear infinite;animation:snow 10s linear infinite}
+  @-webkit-keyframes snow{0%{background-position:0 0,0 0,0 0}50%{background-position:500px 500px,100px 200px,-100px 150px}to{background-position:1000px 1000px,200px 400px,-200px 300px}}
+  @keyframes snow{0%{background-position:0 0,0 0,0 0}50%{background-position:500px 500px,100px 200px,-100px 150px}to{background-position:1000px 1000px,200px 400px,-200px 300px}}
+  

@@ -9,6 +9,7 @@ function App() {
       <div className='menu'>789</div>
       <div className='menu'>000</div>
       </header>
+      <div className='snow-bg'></div>
     </div>
   );
 }
