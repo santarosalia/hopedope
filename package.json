@@ -1,6 +1,6 @@
 {
   "homepage": "https://santarosalia.github.io/hopedope/",
-  "proxy" : "http:localhost:5000",
+  "proxy" : "https://cors-anywhere.herokuapp.com/corsdemo",
   "name": "santa",
   "version": "0.1.0",
   "private": true,
