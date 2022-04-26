@@ -1,4 +1,5 @@
 import './App.css';
+const {addComment,checkComment,updateComment,delComment,allComment} = require('./notion');
 
 function App() {
   return (
@@ -12,7 +13,10 @@ function App() {
       <div className='snow-bg'></div><br></br>
       <div className='body'>
         <div className='box'>안녕하세용</div>
-        <div></div>
+        <div className='comment'>
+          <button onClick={addComment('김동현','안녕하세용','1234')}>추가</button>
+          
+        </div>
       </div>
     </div>
   );
