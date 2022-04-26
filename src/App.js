@@ -1,7 +1,8 @@
 import './App.css';
-const {command} = require('./command');
-import { NotionRenderer } from "react-notion-x";
+
 import React, { useState, useEffect } from 'react';
+const {command} = require('./command');
+
 
 
 function App() {
