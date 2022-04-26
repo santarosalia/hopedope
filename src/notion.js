@@ -66,16 +66,17 @@ const checkComment = async (timestamp,pw)  => {
                         rich_text : {
                             equals : timestamp
                             }
-                    }
-                ],
-                and : [
+                    },
                     {
                         property : "pw",
                         rich_text : {
                             equals : pw
                         }
                     }
+                    
+                    
                 ]
+                
                 
                 
             }
