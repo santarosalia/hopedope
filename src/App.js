@@ -3,8 +3,8 @@ import './App.css';
 import { NotionRenderer } from "react-notion-x";
 
 import React, { useState, useEffect } from 'react';
-import "react-notion/src/styles.css";
-import "prismjs/themes/prism-tomorrow.css"; 
+
+
 function App() {
   const [response, setResponse] = useState({});
   
