@@ -5,7 +5,6 @@ import React, { useState, useEffect } from "react";
 const { addComment } = require("./axios");
 
 function App() {
-  //text : 현재값 / setText: 변경할 값 / useState({초기값})
   const [inputValue, setInputValue] = useState({
     name: "",
     comment: "",
@@ -45,7 +44,7 @@ function App() {
       </header>
       <div className="snow-bg"></div>
       <br></br>
-      <div className="body">
+      <body className="body">
         <div className="box">안녕하세용</div>
         <div className="commentBox">
           <input
@@ -57,6 +56,8 @@ function App() {
             placeholder="비밀번호"
             className="pw"
             onChange={onChange}
+            type="password"
+            maxLength={4}
           ></input>
           <br></br>
           <textarea
@@ -75,7 +76,8 @@ function App() {
             등록
           </button>
         </div>
-      </div>
+      </body>
+      <footer></footer>
     </div>
   );
 }

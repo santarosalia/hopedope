@@ -4,7 +4,7 @@
   background-image: url("https://www.transparenttextures.com/patterns/nice-snow.png");
   height: 100vh;
 }
-.header{
+.header {
   padding-top: 5vh;
   text-align: center;
   padding-left: 10vw;
@@ -14,31 +14,65 @@
   text-align: center;
   float: left;
   width: 20vw;
-  
 }
 
-.snow-bg{
-  content:"";
-  display:block;
-  position:absolute;
-  z-index:2;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  pointer-events:none;
-  background-image:url('/public/sakura-1.png'),url('/public/sakura-2.png');
-  -webkit-animation:snow 10s linear infinite;animation:snow 10s linear infinite
+.snow-bg {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-image: url("/public/sakura-1.png"), url("/public/sakura-2.png");
+  -webkit-animation: snow 10s linear infinite;
+  animation: snow 10s linear infinite;
 }
-@-webkit-keyframes snow{0%{background-position:0 0,0 0,0 0}50%{background-position:500px 500px,100px 200px,-100px 150px}to{background-position:1000px 1000px,200px 400px,-200px 300px}}
-@keyframes snow{0%{background-position:0 0,0 0,0 0}50%{background-position:500px 500px,100px 200px,-100px 150px}to{background-position:1000px 1000px,200px 400px,-200px 300px}}
+@-webkit-keyframes snow {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  to {
+    background-position: 1000px 1000px, 200px 400px, -200px 300px;
+  }
+}
+@keyframes snow {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  to {
+    background-position: 1000px 1000px, 200px 400px, -200px 300px;
+  }
+}
 
-.box{
+.box {
   display: block;
   margin-top: 30px;
   margin-left: 30%;
   margin-right: 30%;
   border: 1px black solid;
   padding-block: 3vh;
-
+}
+input,
+textarea {
+  width: 500px;
+  height: 32px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 10px;
+  background-color: rgb(233, 233, 233);
+}
+.footer {
+  background-color: white;
+  height: 10vh;
 }
