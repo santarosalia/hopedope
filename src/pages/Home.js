@@ -9,7 +9,7 @@ const Home = () => {
         <div id="react-naver-map" className="naverMap">
           <RenderAfterNavermapsLoaded ncpClientId={"chnhlyto0x"}>
             <NaverMap
-              id="react-naver-map" // default: react-naver-map
+              id="react-naver-map"
               style={{
                 width: "100%",
                 height: "250px",
@@ -22,6 +22,7 @@ const Home = () => {
                 onClick={() => {
                   alert("here");
                 }}
+                title={"우리집"}
               />
             </NaverMap>
           </RenderAfterNavermapsLoaded>
