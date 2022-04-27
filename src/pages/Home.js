@@ -15,7 +15,7 @@ const Home = () => {
                 height: "400px",
               }}
               defaultCenter={{ lat: 37.521602, lng: 126.890874 }}
-              defaultZoom={10}
+              defaultZoom={13}
             >
               <Marker
                 position={{ lat: 37.521602, lng: 126.890874 }}
