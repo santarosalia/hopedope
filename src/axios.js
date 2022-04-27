@@ -1,7 +1,7 @@
 const axios = require("axios");
 const databaseId = "8195f0adae7846648cb263d59b1c222b";
 const token = "Bearer secret_SSm0GTsFvR3oeHvxj7ODvHYIoXNRk7Sd6cO0MsMMVs9";
-const addComment = async (name, comment, pw) => {
+const addComment = (name, comment, pw) => {
   var data = JSON.stringify({
     parent: {
       database_id: databaseId,
@@ -51,7 +51,7 @@ const addComment = async (name, comment, pw) => {
     data: data,
   };
 
-  await axios(config)
+  axios(config)
     .then(function (response) {
       //   console.log(JSON.stringify(response.data));
     })
