@@ -1,5 +1,5 @@
 import "./home.css";
-import { RenderAfterNavermapsLoaded, NaverMap } from "react-naver-maps";
+import { RenderAfterNavermapsLoaded, NaverMap, Marker } from "react-naver-maps";
 
 const Home = () => {
   return (
@@ -14,9 +14,17 @@ const Home = () => {
                 width: "100%",
                 height: "400px",
               }}
-              defaultCenter={{ lat: 37.3595704, lng: 127.105399 }}
+              defaultCenter={{ lat: 37.521602, lng: 126.890874 }}
               defaultZoom={10}
-            />
+            >
+              <Marker
+                position={new navermaps.LatLng(37.521602, 126.890874)}
+                animation={navermaps.Animation.BOUNCE}
+                onClick={() => {
+                  alert("here");
+                }}
+              />
+            </NaverMap>
           </RenderAfterNavermapsLoaded>
         </div>
       </div>
