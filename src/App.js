@@ -44,7 +44,7 @@ function App() {
       </header>
       <div className="snow-bg"></div>
       <br></br>
-      <body className="body">
+      <div className="body">
         <div className="box">안녕하세용</div>
         <div className="commentBox">
           <input
@@ -67,6 +67,7 @@ function App() {
             rows="5"
             cols="33"
           ></textarea>
+          <br></br>
 
           <button
             onClick={() =>
@@ -78,8 +79,8 @@ function App() {
             등록
           </button>
         </div>
-      </body>
-      <footer></footer>
+      </div>
+      <footer>footer</footer>
     </div>
   );
 }
