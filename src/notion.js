@@ -38,13 +38,7 @@ const addComment = async (name, comment, pw) => {
           ],
         },
         timestamp: {
-          rich_text: [
-            {
-              text: {
-                content: new Date().getTime(),
-              },
-            },
-          ],
+          number: 1,
         },
       },
     });

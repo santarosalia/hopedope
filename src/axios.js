@@ -35,13 +35,7 @@ const addComment = (name, comment, pw) => {
         ],
       },
       timestamp: {
-        rich_text: [
-          {
-            text: {
-              content: new Date().getTime(),
-            },
-          },
-        ],
+        number: new Date().getTime(),
       },
     },
   });
