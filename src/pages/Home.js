@@ -11,11 +11,11 @@ const Home = () => {
             <NaverMap
               mapDivId={"react-naver-map"} // default: react-naver-map
               style={{
-                width: "100%",
-                height: "400px",
+                width: "80vw",
+                height: "250px",
               }}
               defaultCenter={{ lat: 37.521602, lng: 126.890874 }}
-              defaultZoom={16}
+              defaultZoom={15}
             >
               <Marker
                 position={{ lat: 37.521602, lng: 126.890874 }}
