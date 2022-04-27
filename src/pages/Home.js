@@ -18,8 +18,8 @@ const Home = () => {
               defaultZoom={10}
             >
               <Marker
-                position={new navermaps.LatLng(37.521602, 126.890874)}
-                animation={navermaps.Animation.BOUNCE}
+                position={new window.navermaps.LatLng(37.521602, 126.890874)}
+                animation={window.navermaps.Animation.BOUNCE}
                 onClick={() => {
                   alert("here");
                 }}
