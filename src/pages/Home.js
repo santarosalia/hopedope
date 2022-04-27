@@ -6,12 +6,12 @@ const Home = () => {
     <div className="home">
       <div className="body">
         <div className="box">안녕하세용</div>
-        <div id="react-naver-map">
+        <div id="react-naver-map" className="naverMap">
           <RenderAfterNavermapsLoaded ncpClientId={"chnhlyto0x"}>
             <NaverMap
               id="react-naver-map" // default: react-naver-map
               style={{
-                width: "50vw",
+                width: "100%",
                 height: "250px",
               }}
               defaultCenter={{ lat: 37.521602, lng: 126.890874 }}
