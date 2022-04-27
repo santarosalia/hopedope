@@ -64,6 +64,8 @@ function App() {
             placeholder="글"
             className="comment"
             onChange={onChange}
+            rows="5"
+            cols="33"
           ></textarea>
 
           <button

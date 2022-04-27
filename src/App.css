@@ -61,8 +61,7 @@
   border: 1px black solid;
   padding-block: 3vh;
 }
-input,
-textarea {
+input {
   width: 500px;
   height: 32px;
   font-size: 15px;
@@ -75,4 +74,16 @@ textarea {
 .footer {
   background-color: white;
   height: 10vh;
+}
+textarea {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
 }
