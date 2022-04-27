@@ -2,7 +2,6 @@ import "./home.css";
 import { RenderAfterNavermapsLoaded, NaverMap, Marker } from "react-naver-maps";
 
 const Home = () => {
-  const navermaps = window.naver.maps;
   return (
     <div className="home">
       <div className="body">
@@ -19,8 +18,7 @@ const Home = () => {
               defaultZoom={10}
             >
               <Marker
-                position={new navermaps.LatLng(37.521602, 126.890874)}
-                animation={navermaps.Animation.BOUNCE}
+                position={{ lat: 37.521602, lng: 126.890874 }}
                 onClick={() => {
                   alert("here");
                 }}
