@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="header">
-        <Link to={"/hopedope/home"}>Home</Link>
+        <Link to={"/hopedope/"}>Home</Link>
         <Link to={"/hopedope/about"}>메뉴2</Link>
         <Link to={"/hopedope/photo"}>사진</Link>
         <Link to={"/hopedope/msg"}>방명록</Link>
@@ -17,7 +17,7 @@ const App = () => {
       </header>
 
       <Routes>
-        <Route path="/hopedope/home" element={<Home />} />
+        <Route path="/hopedope/" element={<Home />} />
         <Route path="/hopedope/about" element={<About />} />
         <Route path="/hopedope/msg" element={<Msg />} />
         <Route path="/hopedope/photo" element={<Photo />} />
