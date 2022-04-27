@@ -1,0 +1,53 @@
+textarea {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+  resize: none;
+}
+button {
+  background-color: #f8e6e0;
+  color: #6e6e6e;
+  outline: none;
+  margin: 2vh;
+  box-sizing: border-box;
+  position: relative;
+  border: none;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-family: "paybooc-Light", sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+  border: 3px solid #f199bc;
+}
+button:hover {
+  background-color: #f199bc;
+  color: #d4dfe6;
+}
+button:active {
+  transform: scale(1.5);
+}
+input {
+  width: 32vw;
+  height: 20px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  padding: 10px;
+  background-color: rgb(233, 233, 233);
+  margin: 3px;
+}
+h3 {
+  text-align: left;
+  margin-left: 10vw;
+}

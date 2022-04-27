@@ -1,6 +1,5 @@
-import "../App.css";
-import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import "./msg.css";
 const { addComment } = require("../axios");
 
 const Msg = () => {
@@ -23,6 +22,7 @@ const Msg = () => {
   };
   return (
     <div className="msg">
+      <h3>메시지 써주세요</h3>
       <div className="commentBox">
         <input placeholder="이름" className="name" onChange={onChange}></input>
         <input
@@ -37,7 +37,7 @@ const Msg = () => {
           placeholder="글"
           className="comment"
           onChange={onChange}
-          rows="5"
+          rows="2"
           cols="33"
         ></textarea>
         <br></br>

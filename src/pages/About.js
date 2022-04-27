@@ -1,8 +1,8 @@
-import "../App.css";
+import "./about.css";
 const About = () => {
   return (
     <div className="about">
-      <h1>소개</h1>
+      <h3>소개</h3>
       <p>안뇽하세용 ㅎㅎㅎ</p>
     </div>
   );
