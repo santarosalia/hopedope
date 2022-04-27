@@ -7,7 +7,7 @@ const Home = () => {
       <div className="body">
         <div className="box">안녕하세용</div>
         <div id="react-naver-map">
-          <RenderAfterNavermapsLoaded clientId={"chnhlyto0x"}>
+          <RenderAfterNavermapsLoaded ncpClientId={"chnhlyto0x"}>
             <NaverMap
               mapDivId={"react-naver-map"} // default: react-naver-map
               style={{
