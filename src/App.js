@@ -58,11 +58,12 @@ function App() {
             className="pw"
             onChange={onChange}
           ></input>
-          <input
+          <br></br>
+          <textarea
             placeholder="글"
             className="comment"
             onChange={onChange}
-          ></input>
+          ></textarea>
 
           <button
             onClick={() =>
@@ -71,7 +72,7 @@ function App() {
               })
             }
           >
-            추가
+            등록
           </button>
         </div>
       </div>
