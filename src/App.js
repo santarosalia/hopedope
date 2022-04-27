@@ -54,7 +54,7 @@ function App() {
 
           <button
             onClick={addComment(name, comment, pw).then(() => {
-              window.location.replace("/");
+              window.location.replace("/hopedope");
             })}
           >
             추가
