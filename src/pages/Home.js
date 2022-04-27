@@ -4,7 +4,7 @@ import "./home.css";
   src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=chnhlyto0x"
 ></script>;
 var mapOptions = {
-  center: new naver.maps.LatLng(27.33717815799463, -112.26887415322668),
+  center: new naver.maps.LatLng(37.521602, 126.890874),
   zoom: 10,
 };
 
