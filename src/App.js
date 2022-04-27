@@ -48,11 +48,31 @@ function App() {
       <div className="body">
         <div className="box">안녕하세용</div>
         <div className="commentBox">
-          <input className="name" onChange={onChange}></input>
-          <input className="pw" onChange={onChange}></input>
-          <input className="comment" onChange={onChange}></input>
+          <input
+            placeholder="이름"
+            className="name"
+            onChange={onChange}
+          ></input>
+          <input
+            placeholder="비밀번호"
+            className="pw"
+            onChange={onChange}
+          ></input>
+          <input
+            placeholder="글"
+            className="comment"
+            onChange={onChange}
+          ></input>
 
-          <button onClick={() => addComment(name, comment, pw)}>추가</button>
+          <button
+            onClick={() =>
+              addComment(name, comment, pw).then(() => {
+                window.location.reload();
+              })
+            }
+          >
+            추가
+          </button>
         </div>
       </div>
     </div>
