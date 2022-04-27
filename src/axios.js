@@ -20,7 +20,7 @@ var data = JSON.stringify({
 
 var config = {
   method: 'post',
-  url: 'https://api.notion.com/v1/pages/',
+  url: 'https://hdsx.herokuapp.com/https://api.notion.com/v1/pages/',
   headers: { 
     'Authorization': 'Bearer secret_SSm0GTsFvR3oeHvxj7ODvHYIoXNRk7Sd6cO0MsMMVs9', 
     'Content-Type': 'application/json', 
