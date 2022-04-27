@@ -9,7 +9,7 @@ const Home = () => {
         <div id="react-naver-map">
           <RenderAfterNavermapsLoaded ncpClientId={"chnhlyto0x"}>
             <NaverMap
-              mapDivId={"react-naver-map"} // default: react-naver-map
+              id="react-naver-map" // default: react-naver-map
               style={{
                 width: "50vw",
                 height: "250px",
