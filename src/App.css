@@ -59,21 +59,21 @@
   margin-left: 30%;
   margin-right: 30%;
   border: 1px black solid;
-  padding-block: 3vh;
 }
 input {
-  width: 500px;
+  width: 45vw;
   height: 32px;
   font-size: 15px;
   border: 0;
   border-radius: 15px;
   outline: none;
-  padding-left: 10px;
+  padding: 10px;
   background-color: rgb(233, 233, 233);
+  margin: 5px;
 }
 .footer {
   background-color: white;
-  height: 10vh;
+  height: 200px;
 }
 textarea {
   font-size: 0.8rem;
