@@ -2,7 +2,7 @@ import './App.css';
 
 // import React, { useState, useEffect } from 'react';
 const {command} = require('./command');
-
+const {addComment}  =require('./axios');
 
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
       <div className='body'>
         <div className='box'>안녕하세용</div>
         <div className='comment'>
-          <button onClick={()=>{command(1,'김동현','안녕','1234')}}>추가</button>
+          <button onClick={()=>{addComment()}}>추가</button>
           
         </div>
       </div>
