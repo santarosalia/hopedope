@@ -52,13 +52,7 @@ function App() {
           <input className="pw" onChange={onChange}></input>
           <input className="comment" onChange={onChange}></input>
 
-          <button
-            onClick={addComment(name, comment, pw).then(() => {
-              window.location.reload();
-            })}
-          >
-            추가
-          </button>
+          <button onClick={() => addComment(name, comment, pw)}>추가</button>
         </div>
       </div>
     </div>
