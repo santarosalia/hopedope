@@ -22,9 +22,6 @@ function App() {
       [className]: value,
     };
     setInputValue(nextInputs);
-
-    console.log(e.target); //이벤트가 발생한 타겟의 요소를 출력
-    console.log(e.target.value); //이벤트가 발생한 타겟의 Value를 출력
   };
 
   // useEffect(() => {
@@ -51,10 +48,17 @@ function App() {
       <div className="body">
         <div className="box">안녕하세용</div>
         <div className="commentBox">
-          <input onChange={onChange} className="name"></input>
+          <input className="name" onChange={onChange}></input>
           <input className="pw" onChange={onChange}></input>
           <input className="comment" onChange={onChange}></input>
-          <button onClick={addComment(name, comment, pw)}>추가</button>
+
+          <button
+            onClick={addComment(name, comment, pw).then(() => {
+              location.reload();
+            })}
+          >
+            추가
+          </button>
         </div>
       </div>
     </div>
