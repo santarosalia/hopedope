@@ -11,7 +11,7 @@ const Home = () => {
             <NaverMap
               mapDivId={"react-naver-map"} // default: react-naver-map
               style={{
-                width: "80vw",
+                width: "50vw",
                 height: "250px",
               }}
               defaultCenter={{ lat: 37.521602, lng: 126.890874 }}
