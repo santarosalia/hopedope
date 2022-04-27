@@ -54,7 +54,7 @@ function App() {
 
           <button
             onClick={addComment(name, comment, pw).then(() => {
-              location.reload();
+              window.location.replace("/");
             })}
           >
             추가
