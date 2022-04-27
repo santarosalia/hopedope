@@ -1,7 +1,7 @@
 import "./App.css";
 
 // import React, { useState, useEffect } from 'react';
-const { command } = require("./command");
+
 const { addComment } = require("./axios");
 
 function App() {
