@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 
-export default carousel = () => {
+export const carousel = () => {
   return (
     <Swiper
       spaceBetween={50}
