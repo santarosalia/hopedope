@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-material-ui-carousel";
 import { Paper, Button } from "@mui/material";
 
-function caro() {
+function caro(props) {
   var items = [
     {
       name: "Random Name #1",
@@ -34,4 +34,4 @@ function Item(props) {
   );
 }
 
-export default Item;
+export default caro;
