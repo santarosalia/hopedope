@@ -34,4 +34,4 @@ function Item(props) {
   );
 }
 
-export default caro;
+export default Item;
