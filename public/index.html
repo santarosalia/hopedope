@@ -27,12 +27,12 @@
   </body>
   <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
   <script type="text/javascript">
-    window.onload(function kakao() {
+    window.onload = () => {
       Kakao.init("7d350e6dfaeae1fb62dd5827979d4a88");
       Kakao.Link.createScrapButton({
         container: "#kakao-link-btn",
         requestUrl: "https://santarosalia.github.io/hopedope/",
       });
-    });
+    };
   </script>
 </html>
