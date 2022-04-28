@@ -15,12 +15,12 @@
     "gh-pages": "^3.2.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-material-ui-carousel": "^3.3.3",
     "react-naver-maps": "^0.0.13",
     "react-notion": "^0.10.0",
     "react-notion-x": "^6.12.5",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "swiper": "^8.1.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
