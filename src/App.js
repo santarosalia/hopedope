@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/hopedope/about" element={<About />} />
         <Route path="/hopedope/msg" element={<Msg />} />
         <Route path="/hopedope/photo" element={<Photo />} />
-        <Route path="*" element={<NotFound></NotFound>} />
+        <Route path="*" element={<Home />} />
       </Routes>
       <footer>footer</footer>
     </div>
