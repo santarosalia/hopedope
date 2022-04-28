@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Navigate } from "react-router-dom";
 import "./msg.css";
 const { addComment } = require("../axios");
 
@@ -14,7 +15,6 @@ const Msg = () => {
   const onChange = (e) => {
     const { className, value } = e.target;
     const nextInputs = {
-      //스프레드 문법으로 기존의 객체를 복사한다.
       ...inputValue,
       [className]: value,
     };
@@ -45,7 +45,7 @@ const Msg = () => {
         <button
           onClick={() =>
             addComment(name, comment, pw).then(() => {
-              window.location.reload();
+              <Navigate to="/hopedope/msg" replace={true}></Navigate>;
             })
           }
         >
