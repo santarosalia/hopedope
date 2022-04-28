@@ -2,11 +2,6 @@ import "./home.css";
 import { RenderAfterNavermapsLoaded, NaverMap, Marker } from "react-naver-maps";
 
 const Home = () => {
-  Kakao.init("7d350e6dfaeae1fb62dd5827979d4a88");
-  Kakao.Link.createScrapButton({
-    container: "#kakao-link-btn",
-    requestUrl: "https://santarosalia.github.io/hopedope/",
-  });
   return (
     <div className="home">
       <div className="body">
