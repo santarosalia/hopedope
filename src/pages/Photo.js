@@ -28,7 +28,7 @@ const Photo = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/public/img/1.jpg" />
+              <img src="https://santarosalia.github.io/hopedope/img/1.jpg" />
             </SwiperSlide>
             <SwiperSlide>
               <img src="https://santarosalia.github.io/hopedope/public/img/2.jpg" />
