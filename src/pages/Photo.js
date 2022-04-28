@@ -28,28 +28,28 @@ const Photo = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/public/1.jpg" />
+              <img src="https://santarosalia.github.io/hopedope/public/img/1.jpg" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/public/2.jpg" />
+              <img src="https://santarosalia.github.io/hopedope/public/img/2.jpg" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/public/3.jpg" />
+              <img src="https://santarosalia.github.io/hopedope/public/img/3.jpg" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/public/4.jpg" />
+              <img src="https://santarosalia.github.io/hopedope/public/img/4.jpg" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/public/5.jpg" />
+              <img src="https://santarosalia.github.io/hopedope/public/img/5.jpg" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/public/6.jpg" />
+              <img src="https://santarosalia.github.io/hopedope/public/img/6.jpg" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/public/7.jpg" />
+              <img src="https://santarosalia.github.io/hopedope/public/img/7.jpg" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/public/8.jpg" />
+              <img src="https://santarosalia.github.io/hopedope/public/img/8.jpg" />
             </SwiperSlide>
             <SwiperSlide>
               <img src="https://santarosalia.github.io/hopedope/public/9.jpg" />
