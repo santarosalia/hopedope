@@ -3,11 +3,9 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import "node_modules/swiper/css";
-import "node_modules/swiper/css/effect-coverflow";
-import "node_modules/swiper/css/pagination";
-
-import "./styles.css";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
