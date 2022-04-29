@@ -40,7 +40,7 @@ const addComment = async (name, comment, pw) => {
     },
   });
 
-  var config = {
+  const config = {
     method: "post",
     url: "https://hdsx.herokuapp.com/https://api.notion.com/v1/pages/",
     headers: {
@@ -61,25 +61,25 @@ const addComment = async (name, comment, pw) => {
 };
 
 const allMsg = async () => {
-  const data = "";
-  var config = {
-    method: "post",
-    url: "https://hdsx.herokuapp.com/https://api.notion.com/v1/pages/",
+  const options = {
+    method: "GET",
+    url: "https://api.notion.com/v1/databases/" + databaseId,
     headers: {
-      Authorization: token,
-      "Content-Type": "application/json",
+      Accept: "application/json",
       "Notion-Version": "2022-02-22",
+      Authorization: token,
     },
-    data: data,
   };
 
-  await axios(config)
+  await axios
+    .request(options)
     .then(function (response) {
-      //   console.log(JSON.stringify(response.data));
+      console.log(response.data);
+      return response.data;
     })
     .catch(function (error) {
-      console.log(error);
+      console.error(error);
     });
 };
 
-export { addComment };
+export { addComment, allMsg };
