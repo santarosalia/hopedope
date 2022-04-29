@@ -16,11 +16,11 @@ const App = () => {
         <div className="snow-bg"></div>
       </header>
 
-      <Routes>
+      <Routes location={"https://santarosalia.github.io/hopedope"}>
         <Route path="/hopedope/" element={<Home />} />
-        <Route path="/hopedope/" element={<About />} />
-        <Route path="/hopedope/" element={<Msg />} />
-        <Route path="/hopedope/" element={<Photo />} />
+        <Route path="/hopedope/about" element={<About />} />
+        <Route path="/hopedope/msg" element={<Msg />} />
+        <Route path="/hopedope/photo" element={<Photo />} />
         <Route path="/hopedope/*" element={<Home />} />
       </Routes>
       <footer>footer</footer>
