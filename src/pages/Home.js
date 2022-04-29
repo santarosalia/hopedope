@@ -53,7 +53,7 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h5>{data}</h5>
+                <h5>123</h5>
                 <p>456</p>
               </SwiperSlide>
               <SwiperSlide>
