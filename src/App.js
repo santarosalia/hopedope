@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
 import About from "./pages/About";
 import Home from "./pages/Home";
@@ -15,14 +15,15 @@ const App = () => {
         <Link to={"/hopedope/msg"}>방명록</Link>
         <div className="snow-bg"></div>
       </header>
-
-      <Routes location={"https://santarosalia.github.io/hopedope"}>
-        <Route path="/hopedope/" element={<Home />} />
-        <Route path="/hopedope/about" element={<About />} />
-        <Route path="/hopedope/msg" element={<Msg />} />
-        <Route path="/hopedope/photo" element={<Photo />} />
-        <Route path="/hopedope/*" element={<Home />} />
-      </Routes>
+      <BrowserRouter basename="https://santarosalia.github.io/hopedope">
+        <Routes>
+          <Route path="/hopedope/" element={<Home />} />
+          <Route path="/hopedope/about" element={<About />} />
+          <Route path="/hopedope/msg" element={<Msg />} />
+          <Route path="/hopedope/photo" element={<Photo />} />
+          <Route path="/hopedope/*" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
       <footer>footer</footer>
     </div>
   );
