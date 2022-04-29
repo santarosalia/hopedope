@@ -60,7 +60,7 @@ const addComment = async (name, comment, pw) => {
     });
 };
 
-const allMsg = () => {
+const allMsg = async () => {
   const data = "";
   var config = {
     method: "post",
