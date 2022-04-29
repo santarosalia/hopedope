@@ -20,6 +20,7 @@ const Msg = () => {
     };
     setInputValue(nextInputs);
   };
+
   return (
     <div className="msg">
       <h3>메시지 써주세요</h3>
