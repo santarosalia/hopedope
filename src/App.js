@@ -9,10 +9,10 @@ const App = () => {
   return (
     <div className="App">
       <header className="header">
-        <Link to={"/hopedope/"}>Home</Link>
-        <Link to={"/hopedope/about"}>소개</Link>
-        <Link to={"/hopedope/photo"}>사진</Link>
-        <Link to={"/hopedope/msg"}>방명록</Link>
+        <Link to={"/"}>Home</Link>
+        <Link to={"/about"}>소개</Link>
+        <Link to={"/photo"}>사진</Link>
+        <Link to={"/msg"}>방명록</Link>
         <div className="snow-bg"></div>
       </header>
 
