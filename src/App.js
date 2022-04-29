@@ -17,10 +17,10 @@ const App = () => {
       </header>
 
       <Routes>
-        <Route index element={<Home />} />
-        <Route path="/hopedope/about" element={<About />} />
-        <Route path="/hopedope/msg" element={<Msg />} />
-        <Route path="/hopedope/photo" element={<Photo />} />
+        <Route path="/hopedope/" element={<Home />} />
+        <Route path="/hopedope/" element={<About />} />
+        <Route path="/hopedope/" element={<Msg />} />
+        <Route path="/hopedope/" element={<Photo />} />
         <Route path="/hopedope/*" element={<Home />} />
       </Routes>
       <footer>footer</footer>
