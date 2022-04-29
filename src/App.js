@@ -1,4 +1,4 @@
-import { Route, Routes, HashRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 import About from "./pages/About";
 import Home from "./pages/Home";
@@ -16,13 +16,13 @@ const App = () => {
         <div className="snow-bg"></div>
       </header>
 
-      <HashRouter>
+      <Routes>
         <Route path="/hopedope/" element={<Home />} />
         <Route path="/hopedope/about" element={<About />} />
         <Route path="/hopedope/msg" element={<Msg />} />
         <Route path="/hopedope/photo" element={<Photo />} />
         <Route path="*" element={<Home />} />
-      </HashRouter>
+      </Routes>
       <footer>footer</footer>
     </div>
   );
