@@ -23,7 +23,15 @@ const App = () => {
         <Route path="/photo" element={<Photo />} />
       </Routes>
 
-      <footer>footer</footer>
+      <footer>
+        footer
+        <a id="kakao-link-btn">
+          <img
+            src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+            alt="카카오링크 보내기 버튼"
+          />
+        </a>
+      </footer>
     </div>
   );
 };
