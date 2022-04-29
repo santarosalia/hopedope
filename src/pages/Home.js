@@ -1,6 +1,11 @@
 import "./home.css";
 import { RenderAfterNavermapsLoaded, NaverMap, Marker } from "react-naver-maps";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "./swiper.css";
+import { EffectCoverflow, Pagination } from "swiper";
 const Home = () => {
   return (
     <div className="home">
@@ -26,6 +31,67 @@ const Home = () => {
               />
             </NaverMap>
           </RenderAfterNavermapsLoaded>
+        </div>
+        <div>
+          <>
+            <Swiper
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView={"auto"}
+              coverflowEffect={{
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+              }}
+              pagination={true}
+              modules={[EffectCoverflow, Pagination]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <h5>123</h5>
+                <p>456</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h5>123</h5>
+                <p>456</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h5>123</h5>
+                <p>456</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h5>123</h5>
+                <p>456</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h5>123</h5>
+                <p>456</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h5>123</h5>
+                <p>456</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h5>123</h5>
+                <p>456</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h5>123</h5>
+                <p>456</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h5>123</h5>
+                <p>456</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h5>123</h5>
+                <p>456</p>
+              </SwiperSlide>
+            </Swiper>
+          </>
         </div>
         <a id="kakao-link-btn">
           <img
