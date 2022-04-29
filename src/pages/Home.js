@@ -8,7 +8,7 @@ import "./swiper.css";
 import { EffectCoverflow, Pagination } from "swiper";
 const { allMsg } = require("../axios");
 const Home = () => {
-  const data = allMsg;
+  allMsg();
   return (
     <div className="home">
       <div className="body">
