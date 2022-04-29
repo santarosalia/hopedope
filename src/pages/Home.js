@@ -46,7 +46,7 @@ const Home = () => {
                 modifier: 1,
                 slideShadows: true,
               }}
-              pagination={true}
+              pagination={false}
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
             >
