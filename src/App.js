@@ -15,15 +15,17 @@ const App = () => {
         <Link to={"/hopedope/msg"}>방명록</Link>
         <div className="snow-bg"></div>
       </header>
-      <BrowserRouter basename="https://santarosalia.github.io/hopedope">
-        <Routes>
+
+      <Routes>
+        <BrowserRouter basename="https://santarosalia.github.io/hopedope">
           <Route path="/hopedope/" element={<Home />} />
           <Route path="/hopedope/about" element={<About />} />
           <Route path="/hopedope/msg" element={<Msg />} />
           <Route path="/hopedope/photo" element={<Photo />} />
           <Route path="/hopedope/*" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
+        </BrowserRouter>
+      </Routes>
+
       <footer>footer</footer>
     </div>
   );
