@@ -60,4 +60,26 @@ const addComment = async (name, comment, pw) => {
     });
 };
 
+const allMsg = () => {
+  const data = "";
+  var config = {
+    method: "post",
+    url: "https://hdsx.herokuapp.com/https://api.notion.com/v1/pages/",
+    headers: {
+      Authorization: token,
+      "Content-Type": "application/json",
+      "Notion-Version": "2022-02-22",
+    },
+    data: data,
+  };
+
+  await axios(config)
+    .then(function (response) {
+      //   console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+};
+
 export { addComment };
