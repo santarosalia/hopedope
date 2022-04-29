@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Redirect } from "react-router-dom";
 import { Link } from "react-router-dom";
 import About from "./pages/About";
 import Home from "./pages/Home";
@@ -22,6 +22,7 @@ const App = () => {
         <Route path="/hopedope/msg" element={<Msg />} />
         <Route path="/hopedope/photo" element={<Photo />} />
         <Route path="*" element={<Home />} />
+        <Redirect from="/hopedope/about" to="/hopedope/about" />
       </Routes>
       <footer>footer</footer>
     </div>
