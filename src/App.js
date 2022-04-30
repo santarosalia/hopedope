@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Msg from "./pages/Msg";
 import Photo from "./pages/Photo";
 import "./App.css";
+
 const App = () => {
   return (
     <div className="App">

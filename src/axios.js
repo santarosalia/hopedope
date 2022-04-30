@@ -63,7 +63,9 @@ const addComment = async (name, comment, pw) => {
 const allMsg = async () => {
   const options = {
     method: "GET",
-    url: "https://api.notion.com/v1/databases/" + databaseId,
+    url:
+      "https://hdsx.herokuapp.com/https://api.notion.com/v1/databases/" +
+      databaseId,
     headers: {
       Accept: "application/json",
       "Notion-Version": "2022-02-22",
