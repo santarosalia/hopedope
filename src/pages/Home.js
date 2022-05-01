@@ -9,11 +9,9 @@ import { EffectCoverflow, Pagination } from "swiper";
 import { useState } from "react";
 
 const { allMsg } = require("../axios");
-const Home = () => {
-  allMsg().then((results) => {
-    console.log(results);
-  });
-
+const Home = async () => {
+  const results = await allMsg();
+  console.log(results[0]);
   return (
     <div className="home">
       <div className="body">
@@ -58,7 +56,7 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h5>{result[1]}</h5>
+                <h5></h5>
                 <p>456</p>
               </SwiperSlide>
               <SwiperSlide>
