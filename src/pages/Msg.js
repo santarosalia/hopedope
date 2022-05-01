@@ -46,7 +46,7 @@ const Msg = () => {
         <button
           onClick={() =>
             addComment(name, comment, pw).then(() => {
-              location.reload();
+              window.location.reload();
             })
           }
         >
