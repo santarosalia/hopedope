@@ -9,9 +9,11 @@ import { EffectCoverflow, Pagination } from "swiper";
 import { useState } from "react";
 
 const { allMsg } = require("../axios");
-const Home = async () => {
-  const results = await allMsg();
-  console.log(results[0]);
+const Home = () => {
+  allMsg((results) => {
+    console.log(results[0]);
+  });
+
   return (
     <div className="home">
       <div className="body">
