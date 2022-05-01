@@ -10,7 +10,8 @@ import { useState } from "react";
 
 const { allMsg } = require("../axios");
 const Home = () => {
-  const result = await allMsg().then();
+  const result = Promise.resolve(allMsg());
+
   console.log(result);
   return (
     <div className="home">
