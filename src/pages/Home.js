@@ -12,12 +12,10 @@ const { allMsg } = require("../axios");
 const Home = () => {
   const [result, setResult] = useState(JSON);
 
-  const ax = async () => {
-    const result = await allMsg().then();
-    console.log(result);
-    setResult(result);
-  };
-  ax();
+  allMsg().then((results) => {
+    setResult(results);
+  });
+
   console.log(result);
 
   return (
