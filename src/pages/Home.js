@@ -10,12 +10,13 @@ import { useState, useEffect } from "react";
 
 const { allMsg } = require("../axios");
 const Home = () => {
-  const [result, setResult] = useState();
+  const [result, setResult] = useState(JSON);
   useEffect(() => {
     ax();
   }, []);
   const ax = async () => {
     const result = await allMsg();
+    console.log(result);
     setResult(result);
   };
   console.log(result);
