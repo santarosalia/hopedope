@@ -46,11 +46,7 @@ const Msg = () => {
         <button
           onClick={() =>
             addComment(name, comment, pw).then(() => {
-              setInputValue({
-                name: "",
-                comment: "",
-                pw: "",
-              });
+              location.href("/hopedope");
             })
           }
         >
