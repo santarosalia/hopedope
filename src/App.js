@@ -9,18 +9,7 @@ import Helmet from "react-helmet";
 const App = () => {
   return (
     <div className="App">
-      <Helmet>
-        <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-        <script type="text/javascript">Kakao.init("7d350e6dfaeae1fb62dd5827979d4a88");
-      Kakao.Link.createScrapButton({
-        container: "#kakao-link-btn",
-        requestUrl: "https://santarosalia.github.io/hopedope/",
-        templateId: 75771,
-        templateArgs: {
-          THU: "https://raw.githubusercontent.com/santarosalia/hopedope/master/public/img/thumb.jpeg"
-        }
-      });</script>
-      </Helmet>
+      
       
       <header className="header">
         <Link to={"/"}>Home</Link>
@@ -46,6 +35,18 @@ const App = () => {
           />
         </a>
       </footer>
+      <Helmet>
+        <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+        <script type="text/javascript">Kakao.init("7d350e6dfaeae1fb62dd5827979d4a88");
+      Kakao.Link.createScrapButton({
+        container: "#kakao-link-btn",
+        requestUrl: "https://santarosalia.github.io/hopedope/",
+        templateId: 75771,
+        templateArgs: {
+          THU: "https://raw.githubusercontent.com/santarosalia/hopedope/master/public/img/thumb.jpeg"
+        }
+      });</script>
+      </Helmet>
     </div>
   );
 };
