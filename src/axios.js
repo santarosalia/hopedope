@@ -79,7 +79,7 @@ const allMsg = async () => {
     .request(options)
     .then(function (response) {
       console.log(response.data);
-      return response.data;
+      return response.data.results;
     })
     .catch(function (error) {
       console.error(error);
