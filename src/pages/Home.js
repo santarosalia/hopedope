@@ -11,14 +11,13 @@ import { useState, useEffect } from "react";
 const { allMsg } = require("../axios");
 const Home = () => {
   const [result, setResult] = useState(JSON);
-  useEffect(() => {
-    ax();
-  }, []);
+
   const ax = async () => {
-    const result = await allMsg();
+    const result = await allMsg().then();
     console.log(result);
     setResult(result);
   };
+  ax();
   console.log(result);
 
   return (
