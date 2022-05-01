@@ -6,18 +6,17 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "./swiper.css";
 import { EffectCoverflow, Pagination } from "swiper";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const { allMsg } = require("../axios");
 const Home = () => {
-  const [result, setResult] = useState(JSON);
+  const [result, setResult] = useState();
 
   allMsg().then((results) => {
-    console.log(results);
     setResult(results);
   });
 
-  console.log(result);
+  console.log(result[0]);
 
   return (
     <div className="home">
@@ -63,7 +62,7 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h5></h5>
+                <h5>{result[0]}</h5>
                 <p>456</p>
               </SwiperSlide>
               <SwiperSlide>
