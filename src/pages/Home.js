@@ -6,13 +6,20 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "./swiper.css";
 import { EffectCoverflow, Pagination } from "swiper";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const { allMsg } = require("../axios");
 const Home = () => {
-  const result = Promise.resolve(allMsg());
-
+  const [result, setResult] = useState();
+  useEffect(() => {
+    ax();
+  }, []);
+  const ax = async () => {
+    const result = await allMsg();
+    setResult(result);
+  };
   console.log(result);
+
   return (
     <div className="home">
       <div className="body">
