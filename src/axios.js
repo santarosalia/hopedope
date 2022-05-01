@@ -78,7 +78,7 @@ const allMsg = async () => {
   await axios
     .request(options)
     .then(function (response) {
-      console.log(response.data);
+      console.log(response.data.results);
       return response.data.results;
     })
     .catch(function (error) {
