@@ -62,15 +62,17 @@ const addComment = async (name, comment, pw) => {
 
 const allMsg = async () => {
   const options = {
-    method: "GET",
+    method: "POST",
     url:
       "https://hdsx.herokuapp.com/https://api.notion.com/v1/databases/" +
-      databaseId,
+      databaseId +
+      "query",
     headers: {
       Accept: "application/json",
       "Notion-Version": "2022-02-22",
       Authorization: token,
     },
+    data: { page_size: 100 },
   };
 
   await axios
