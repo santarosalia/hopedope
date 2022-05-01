@@ -75,7 +75,7 @@ const allMsg = async () => {
     data: { page_size: 100 },
   };
 
-  await axios
+  const result = await axios
     .request(options)
     .then(function (response) {
       return response.data.results;
@@ -83,6 +83,7 @@ const allMsg = async () => {
     .catch(function (error) {
       console.error(error);
     });
+  return result;
 };
 
 export { addComment, allMsg };
