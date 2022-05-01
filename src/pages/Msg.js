@@ -46,7 +46,11 @@ const Msg = () => {
         <button
           onClick={() =>
             addComment(name, comment, pw).then(() => {
-              <Navigate to="/hopedope/msg" replace={true}></Navigate>;
+              setInputValue({
+                name: "",
+                comment: "",
+                pw: "",
+              });
             })
           }
         >
