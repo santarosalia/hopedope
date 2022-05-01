@@ -66,7 +66,7 @@ const allMsg = async () => {
     url:
       "https://hdsx.herokuapp.com/https://api.notion.com/v1/databases/" +
       databaseId +
-      "query",
+      "/query",
     headers: {
       Accept: "application/json",
       "Notion-Version": "2022-02-22",
