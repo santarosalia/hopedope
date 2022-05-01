@@ -8,7 +8,7 @@ import "./swiper.css";
 import { EffectCoverflow, Pagination } from "swiper";
 const { allMsg } = require("../axios");
 const Home = () => {
-  allMsg();
+  const result = allMsg().then();
   return (
     <div className="home">
       <div className="body">
@@ -53,7 +53,7 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h5>123</h5>
+                <h5>{result[1]}</h5>
                 <p>456</p>
               </SwiperSlide>
               <SwiperSlide>
