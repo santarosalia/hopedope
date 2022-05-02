@@ -34,13 +34,12 @@ const Home = () => {
 
     setResult(results);
 
-    console.log("result?" + JSON.stringify(result));
+    console.log("result?" + JSON.parse(result));
   };
   useEffect(() => {
     ax();
+    console.log("리절트?" + result);
   }, []);
-
-  console.log("리절트사이즈?" + result);
 
   // console.log(result[0].properties.name.title[0].text.content);
   // console.log(result[0].properties.comment.rich_text[0].text.content);
