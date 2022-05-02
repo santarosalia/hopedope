@@ -45,12 +45,17 @@ const Home = () => {
         pw: results[i].properties.pw.rich_text[0].text.content,
       };
       setResult([...result, dic]);
-      console.log("result size 1" + result.length);
     }
+    console.log("result size ?" + result.length);
   };
-  ax();
-  console.log("리스트사이즈?2" + result.length);
+  useEffect(() => {
+    ax();
+  }, []);
 
+  console.log("리절트사이즈?" + result.length);
+  result.map((val) => {
+    console.log(val.msg);
+  });
   // console.log(result[0].properties.name.title[0].text.content);
   // console.log(result[0].properties.comment.rich_text[0].text.content);
   // console.log(result[0].properties.pw.rich_text[0].text.content);
