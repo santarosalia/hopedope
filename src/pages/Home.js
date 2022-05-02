@@ -64,16 +64,8 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h5>
-                  {JSON.stringify(
-                    result[0].properties.name.title[0].text.content
-                  )}
-                </h5>
-                <p>
-                  {JSON.stringify(
-                    result[0].properties.comment.rich_text[0].text.content
-                  )}
-                </p>
+                <h5></h5>
+                <p></p>
               </SwiperSlide>
               <SwiperSlide>
                 <h5>123</h5>
