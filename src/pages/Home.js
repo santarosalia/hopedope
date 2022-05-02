@@ -19,8 +19,25 @@ const Home = () => {
   ]);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    allMsg().then((results) => {
+  // useEffect(() => {
+  //   allMsg().then((results) => {
+  //     setLoading(true);
+
+  //     for (let i = 0; i < results.length - 1; i++) {
+  //       const dic = {
+  //         name: results[i].properties.name.title[0].text.content,
+  //         msg: results[i].properties.comment.rich_text[0].text.content,
+  //         pw: results[i].properties.pw.rich_text[0].text.content,
+  //       };
+
+  //       setResult([...result, dic]);
+  //     }
+  //     setLoading(false);
+  //   });
+  // }, []);
+
+  const ax = async () => {
+    await allMsg().then((results) => {
       setLoading(true);
 
       for (let i = 0; i < results.length - 1; i++) {
@@ -34,6 +51,9 @@ const Home = () => {
       }
       setLoading(false);
     });
+  };
+  useEffect(() => {
+    ax();
   }, []);
   result.map((val) => {
     console.log(val.msg);
