@@ -40,7 +40,7 @@ const Home = () => {
         pw: results[i].properties.pw.rich_text[0].text.content,
       };
 
-      setResult([...result, JSON.parse(dic)]);
+      setResult([...result, JSON.parse(JSON.stringify(dic))]);
     }
 
     console.log("result?string in" + result.length);
