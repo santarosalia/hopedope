@@ -34,7 +34,8 @@ const Home = () => {
     console.log(results);
     setResult(results);
 
-    console.log("result?string in" + result);
+    console.log("result?string in" + result.length);
+    console.log("result?string in" + result[0]);
   };
   useEffect(() => {
     ax();
