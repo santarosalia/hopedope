@@ -23,13 +23,6 @@ const Home = () => {
     allMsg().then((results) => {
       setLoading(true);
 
-      setResult([
-        {
-          name: "",
-          msg: "",
-          pw: "",
-        },
-      ]);
       for (let i = 0; i < results.length - 1; i++) {
         const dic = {
           name: results[i].properties.name.title[0].text.content,
