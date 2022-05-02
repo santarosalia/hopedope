@@ -35,7 +35,7 @@ const Home = () => {
   //   });
   // }, []);
 
-  async () => {
+  const ax = async () => {
     const results = await allMsg();
 
     for (let i = 0; i < results.length - 1; i++) {
@@ -48,7 +48,7 @@ const Home = () => {
       console.log("result size 1" + result.length);
     }
   };
-
+  ax();
   console.log("리스트사이즈?2" + result.length);
 
   // console.log(result[0].properties.name.title[0].text.content);
