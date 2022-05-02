@@ -28,6 +28,7 @@ const Home = () => {
         msg: results[i].properties.comment.rich_text[0].text.content,
         pw: results[i].properties.pw.rich_text[0].text.content,
       };
+      console.log(dic.name);
 
       setResult([...result, dic]);
     }
