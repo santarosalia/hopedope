@@ -47,6 +47,7 @@ const Home = () => {
     }
 
     console.log("result?string in" + result.length);
+    console.log("result?string in" + result[0]);
   };
   useEffect(() => {
     ax();
@@ -100,12 +101,9 @@ const Home = () => {
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
             >
-              {result.map((val) => {
-                <SwiperSlide key={val.name}>
-                  <h3>{val.name}</h3>
-                  <p>{val.msg}</p>
-                </SwiperSlide>;
-              })}
+              <SwiperSlide>
+                <h3></h3>
+              </SwiperSlide>
             </Swiper>
           </>
         </div>
