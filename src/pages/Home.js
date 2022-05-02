@@ -10,20 +10,17 @@ import { useState } from "react";
 
 const { allMsg } = require("../axios");
 const Home = () => {
-  const [result, setResult] = useState({
-    name: "",
-    msg: "",
-    pw: "",
-  });
+  const [result, setResult] = useState([]);
   let list = [];
 
   allMsg().then((results) => {
     for (let i = 0; i < results.length - 1; i++) {
-      setResult({
+      const dic = {
         name: result[i].properties.name.title[0].text.content,
         msg: result[i].properties.comment.rich_text[0].text.content,
         pw: result[i].properties.pw.rich_text[0].text.content,
-      });
+      };
+      setResult([...result], dic);
       list.push(result);
     }
   });
@@ -76,8 +73,8 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h5>{result.name}</h5>
-                <p>{result.msg}</p>
+                <h5>{result[0].name}</h5>
+                <p>{result[0].msg}</p>
               </SwiperSlide>
               <SwiperSlide>
                 <h5>123</h5>
