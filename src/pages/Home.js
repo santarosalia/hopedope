@@ -40,7 +40,7 @@ const Home = () => {
 
         setResult([...result, dic]);
       }
-      setLoading(true);
+      setLoading(false);
     });
   };
   useEffect(() => {
