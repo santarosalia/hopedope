@@ -76,8 +76,8 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h5>{list[0].name}</h5>
-                <p>{list[0].msg}</p>
+                <h5>{result.name}</h5>
+                <p>{result.msg}</p>
               </SwiperSlide>
               <SwiperSlide>
                 <h5>123</h5>
