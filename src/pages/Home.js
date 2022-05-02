@@ -88,8 +88,13 @@ const Home = () => {
                 className="mySwiper"
               >
                 <SwiperSlide>
-                  <h5>{result[5].name}</h5>
-                  <p>{result[5].msg}</p>
+                  <h5>
+                    {result.map((val) => {
+                      val.name;
+                    })}
+                  </h5>
+
+                  <p></p>
                 </SwiperSlide>
                 <SwiperSlide>
                   <h5>123</h5>
