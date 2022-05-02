@@ -10,13 +10,11 @@ import { useState, useEffect } from "react";
 
 const { allMsg } = require("../axios");
 const Home = () => {
-  const [result, setResult] = useState([
-    {
-      name: "이름",
-      msg: "메시지",
-      pw: "비밀번호",
-    },
-  ]);
+  const [result, setResult] = useState({
+    name: "이름",
+    msg: "메시지",
+    pw: "비밀번호",
+  });
 
   // useEffect(() => {
   //   allMsg().then((results) => {
@@ -44,7 +42,7 @@ const Home = () => {
         msg: results[i].properties.comment.rich_text[0].text.content,
         pw: results[i].properties.pw.rich_text[0].text.content,
       };
-      setResult([...result, dic]);
+      setResult(dic);
     }
     console.log("result size ?" + result.length);
   };
