@@ -93,13 +93,11 @@ const Home = () => {
               className="mySwiper"
             >
               {list.map((val) => {
-                return (
-                  <SwiperSlide key={val.name}>
-                    <h5>{val.name}</h5>
+                <SwiperSlide key={val.name}>
+                  <h5>{val.name}</h5>
 
-                    <p>{val.msg}</p>
-                  </SwiperSlide>
-                );
+                  <p>{val.msg}</p>
+                </SwiperSlide>;
               })}
             </Swiper>
           </>
