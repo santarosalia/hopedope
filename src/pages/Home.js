@@ -62,7 +62,7 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h5>{result[0]}</h5>
+                <h5>{JSON.stringify(result[0])}</h5>
                 <p>456</p>
               </SwiperSlide>
               <SwiperSlide>
