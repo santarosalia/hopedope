@@ -13,7 +13,7 @@ const Home = () => {
   const [result, setResult] = useState([]);
 
   allMsg().then((results) => {
-    console.log(JSON.parse(results));
+    console.log(results.length);
   });
 
   // console.log(result[0].properties.name.title[0].text.content);
