@@ -51,9 +51,8 @@ const Home = () => {
   }, []);
 
   console.log("리절트사이즈?" + result.length);
-  result.map((val) => {
-    console.log(val.msg);
-  });
+  console.log(result.name);
+  console.log(result.msg);
   // console.log(result[0].properties.name.title[0].text.content);
   // console.log(result[0].properties.comment.rich_text[0].text.content);
   // console.log(result[0].properties.pw.rich_text[0].text.content);
