@@ -17,7 +17,6 @@ const Home = () => {
       pw: "비밀번호",
     },
   ]);
-  const [loading, setLoading] = useState(false);
 
   // useEffect(() => {
   //   allMsg().then((results) => {
@@ -36,34 +35,19 @@ const Home = () => {
   //   });
   // }, []);
   let list = [];
-  const ax = async () => {
-    await allMsg().then((results) => {
-      setLoading(true);
-
-      for (let i = 0; i < results.length - 1; i++) {
-        const dic = {
-          name: results[i].properties.name.title[0].text.content,
-          msg: results[i].properties.comment.rich_text[0].text.content,
-          pw: results[i].properties.pw.rich_text[0].text.content,
-        };
-        list.push(dic);
-      }
-      setLoading(false);
-    });
-  };
-  useEffect(() => {
-    ax();
-    if (!loading) {
-      list.map((val) => {
-        console.log(val.msg);
-      });
-    }
-  }, []);
+  const results = allMsg();
+  for (let i = 0; i < results.length - 1; i++) {
+    const dic = {
+      name: results[i].properties.name.title[0].text.content,
+      msg: results[i].properties.comment.rich_text[0].text.content,
+      pw: results[i].properties.pw.rich_text[0].text.content,
+    };
+    list.push(dic);
+  }
 
   // console.log(result[0].properties.name.title[0].text.content);
   // console.log(result[0].properties.comment.rich_text[0].text.content);
   // console.log(result[0].properties.pw.rich_text[0].text.content);
-  if (loading) return <div>로딩중</div>;
 
   return (
     <div className="home">
@@ -108,7 +92,7 @@ const Home = () => {
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
             >
-              {result.map((val) => {
+              {list.map((val) => {
                 return (
                   <SwiperSlide key={val.name}>
                     <h5>{val.name}</h5>

@@ -60,7 +60,7 @@ const addComment = async (name, comment, pw) => {
     });
 };
 
-const allMsg = async () => {
+const allMsg = () => {
   const options = {
     method: "POST",
     url:
@@ -75,7 +75,7 @@ const allMsg = async () => {
     data: { page_size: 100 },
   };
 
-  const result = await axios
+  const result = axios
     .request(options)
     .then(function (response) {
       return response.data.results;
