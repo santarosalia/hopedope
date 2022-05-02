@@ -10,7 +10,7 @@ import { useState } from "react";
 
 const { allMsg } = require("../axios");
 const Home = () => {
-  const [result, setResult] = useState();
+  const [result, setResult] = useState(JSON);
 
   allMsg().then((results) => {
     setResult(results);
