@@ -10,16 +10,21 @@ import { useState } from "react";
 
 const { allMsg } = require("../axios");
 const Home = () => {
-  const [result, setResult] = useState([]);
+  const [result, setResult] = useState({
+    name: "",
+    msg: "",
+    pw: "",
+  });
   let list = [];
 
   allMsg().then((results) => {
     for (let i = 0; i < results.length - 1; i++) {
-      list.push({
+      setResult({
         name: result[i].properties.name.title[0].text.content,
         msg: result[i].properties.comment.rich_text[0].text.content,
         pw: result[i].properties.pw.rich_text[0].text.content,
       });
+      list.push(result);
     }
   });
 
