@@ -36,6 +36,8 @@ const Home = () => {
   // }, []);
   let list = [];
   const results = allMsg();
+
+  console.log(results);
   for (let i = 0; i < results.length - 1; i++) {
     const dic = {
       name: results[i].properties.name.title[0].text.content,
