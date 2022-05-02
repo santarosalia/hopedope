@@ -35,7 +35,7 @@ const Home = () => {
   //     setLoading(false);
   //   });
   // }, []);
-
+  let list = [];
   const ax = async () => {
     await allMsg().then((results) => {
       setLoading(true);
@@ -46,16 +46,7 @@ const Home = () => {
           msg: results[i].properties.comment.rich_text[0].text.content,
           pw: results[i].properties.pw.rich_text[0].text.content,
         };
-        result.map((val) => {
-          console.log("for문안에서");
-          console.log(val.name);
-        });
-
-        setResult([...result, dic]);
-        result.map((val) => {
-          console.log("for문안에서 setResult 하고");
-          console.log(val.name);
-        });
+        list.push(dic);
       }
       setLoading(false);
     });
@@ -63,7 +54,7 @@ const Home = () => {
   useEffect(() => {
     ax();
   }, []);
-  result.map((val) => {
+  list.map((val) => {
     console.log(val.msg);
   });
 
