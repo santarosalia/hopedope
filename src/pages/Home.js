@@ -37,7 +37,6 @@ const Home = () => {
   };
   useEffect(() => {
     ax();
-    console.log(result[5].name);
   }, []);
 
   // console.log(result[0].properties.name.title[0].text.content);
