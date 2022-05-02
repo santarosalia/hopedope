@@ -44,7 +44,7 @@ const Home = () => {
   };
   useEffect(() => {
     ax();
-    console.log(result[0].name);
+    console.log(result[5].name);
   }, []);
 
   // console.log(result[0].properties.name.title[0].text.content);
@@ -96,8 +96,8 @@ const Home = () => {
                 className="mySwiper"
               >
                 <SwiperSlide>
-                  <h5>{result[0].name}</h5>
-                  <p>{result[0].msg}</p>
+                  <h5>{result[5].name}</h5>
+                  <p>{result[5].msg}</p>
                 </SwiperSlide>
                 <SwiperSlide>
                   <h5>123</h5>
