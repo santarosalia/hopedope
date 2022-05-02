@@ -11,9 +11,16 @@ import { useState } from "react";
 const { allMsg } = require("../axios");
 const Home = () => {
   const [result, setResult] = useState([]);
+  let list = [];
 
   allMsg().then((results) => {
-    console.log(results.length);
+    for (let i = 0; i < results.length - 1; i++) {
+      list.push({
+        name: result[i].properties.name.title[0].text.content,
+        msg: result[i].properties.comment.rich_text[0].text.content,
+        pw: result[i].properties.pw.rich_text[0].text.content,
+      });
+    }
   });
 
   // console.log(result[0].properties.name.title[0].text.content);
@@ -64,8 +71,8 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h5></h5>
-                <p></p>
+                <h5>{list[0].name}</h5>
+                <p>{list[0].msg}</p>
               </SwiperSlide>
               <SwiperSlide>
                 <h5>123</h5>
