@@ -18,12 +18,11 @@ const Home = () => {
     },
   ]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
 
   const ax = () => {
     allMsg().then((results) => {
       setLoading(true);
-      setError(null);
+
       setResult([
         {
           name: "",
@@ -96,8 +95,8 @@ const Home = () => {
                 className="mySwiper"
               >
                 <SwiperSlide>
-                  <h5></h5>
-                  <p></p>
+                  <h5>{result[0].name}</h5>
+                  <p>{result[0].msg}</p>
                 </SwiperSlide>
                 <SwiperSlide>
                   <h5>123</h5>
