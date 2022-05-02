@@ -46,10 +46,16 @@ const Home = () => {
           msg: results[i].properties.comment.rich_text[0].text.content,
           pw: results[i].properties.pw.rich_text[0].text.content,
         };
-        console.log("for문 안에서" + result);
+        result.map((val) => {
+          console.log("for문안에서");
+          console.log(val.name);
+        });
 
         setResult([...result, dic]);
-        console.log("for문 안에서 setResult 하고" + result);
+        result.map((val) => {
+          console.log("for문안에서 setResult 하고");
+          console.log(val.name);
+        });
       }
       setLoading(false);
     });
