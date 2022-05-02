@@ -34,7 +34,7 @@ const Home = () => {
 
     setResult(results);
 
-    console.log("result?" + result);
+    console.log("result?" + JSON.stringify(result));
   };
   useEffect(() => {
     ax();
