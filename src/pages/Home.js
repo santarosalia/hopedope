@@ -34,11 +34,11 @@ const Home = () => {
     console.log(results);
     setResult(results);
 
-    console.log("result?string in" + JSON.stringify(result));
+    console.log("result?string in" + result);
   };
   useEffect(() => {
     ax();
-    console.log("result?string out" + JSON.stringify(result));
+    console.log("result?string out" + result);
   }, []);
 
   // console.log(result[0].properties.name.title[0].text.content);
