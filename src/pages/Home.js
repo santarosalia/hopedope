@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 
 const { allMsg } = require("../axios");
 const Home = () => {
-  const [result, setResult] = useState([]);
+  const [result, setResult] = useState("");
 
   // useEffect(() => {
   //   allMsg().then((results) => {
@@ -32,10 +32,9 @@ const Home = () => {
   const ax = async () => {
     const results = await allMsg();
     console.log(results);
-    setResult(results);
+    setResult(JSON.stringify(results));
 
-    console.log("result?string in" + result.length);
-    console.log("result?string in" + result[0]);
+    console.log("result?string in" + result);
   };
   useEffect(() => {
     ax();
