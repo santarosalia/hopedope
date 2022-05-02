@@ -34,20 +34,22 @@ const Home = () => {
   //     setLoading(false);
   //   });
   // }, []);
-  let list = [];
-  const results = allMsg();
 
-  console.log(results);
-  for (let i = 0; i < results.length - 1; i++) {
-    const dic = {
-      name: results[i].properties.name.title[0].text.content,
-      msg: results[i].properties.comment.rich_text[0].text.content,
-      pw: results[i].properties.pw.rich_text[0].text.content,
-    };
-    list.push(dic);
-    console.log("리스트사이즈 1" + list.length);
-  }
-  console.log("리스트사이즈?" + list.length);
+  async () => {
+    const results = await allMsg();
+
+    for (let i = 0; i < results.length - 1; i++) {
+      const dic = {
+        name: results[i].properties.name.title[0].text.content,
+        msg: results[i].properties.comment.rich_text[0].text.content,
+        pw: results[i].properties.pw.rich_text[0].text.content,
+      };
+      setResult([...result, dic]);
+      console.log("result size 1" + result.length);
+    }
+  };
+
+  console.log("리스트사이즈?2" + result.length);
 
   // console.log(result[0].properties.name.title[0].text.content);
   // console.log(result[0].properties.comment.rich_text[0].text.content);
@@ -96,13 +98,7 @@ const Home = () => {
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
             >
-              {list.map((val) => {
-                <SwiperSlide key={val.name}>
-                  <h5>{val.name}</h5>
-
-                  <p>{val.msg}</p>
-                </SwiperSlide>;
-              })}
+              <SwiperSlide></SwiperSlide>
             </Swiper>
           </>
         </div>
