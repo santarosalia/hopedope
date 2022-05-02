@@ -16,7 +16,9 @@ const Home = () => {
     setResult(results);
   });
 
-  console.log(result[0]);
+  console.log(result[0].properties.name.title[0].text.content);
+  console.log(result[0].properties.comment.rich_text[0].text.content);
+  console.log(result[0].properties.pw.rich_text[0].text.content);
 
   return (
     <div className="home">
@@ -62,8 +64,16 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h5>{JSON.stringify(result[0])}</h5>
-                <p>456</p>
+                <h5>
+                  {JSON.stringify(
+                    result[0].properties.name.title[0].text.content
+                  )}
+                </h5>
+                <p>
+                  {JSON.stringify(
+                    result[0].properties.comment.rich_text[0].text.content
+                  )}
+                </p>
               </SwiperSlide>
               <SwiperSlide>
                 <h5>123</h5>
