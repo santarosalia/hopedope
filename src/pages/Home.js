@@ -6,24 +6,27 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "./swiper.css";
 import { EffectCoverflow, Pagination } from "swiper";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const { allMsg } = require("../axios");
 const Home = () => {
   const [result, setResult] = useState([]);
   let list = [];
 
-  allMsg().then((results) => {
-    for (let i = 0; i < results.length - 1; i++) {
-      const dic = {
-        name: result[i].properties.name.title[0].text.content,
-        msg: result[i].properties.comment.rich_text[0].text.content,
-        pw: result[i].properties.pw.rich_text[0].text.content,
-      };
-      setResult([...result], dic);
-      list.push(result);
-    }
-  });
+  useEffect(
+    allMsg().then((results) => {
+      for (let i = 0; i < results.length - 1; i++) {
+        const dic = {
+          name: result[i].properties.name.title[0].text.content,
+          msg: result[i].properties.comment.rich_text[0].text.content,
+          pw: result[i].properties.pw.rich_text[0].text.content,
+        };
+        setResult([...result], dic);
+        list.push(result);
+      }
+    }),
+    []
+  );
 
   // console.log(result[0].properties.name.title[0].text.content);
   // console.log(result[0].properties.comment.rich_text[0].text.content);
