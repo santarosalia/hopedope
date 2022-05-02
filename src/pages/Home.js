@@ -25,13 +25,13 @@ const Home = () => {
         msg: results[i].properties.comment.rich_text[0].text.content,
         pw: results[i].properties.pw.rich_text[0].text.content,
       };
-      console.log("dic name : " + dic.name);
+
       setResult([...result], dic);
-      result.map((val) => {
-        console.log(val.name);
-        console.log(val.msg);
-      });
     }
+  });
+  result.map((val) => {
+    console.log(val.name);
+    console.log(val.msg);
   });
 
   // console.log(result[0].properties.name.title[0].text.content);
@@ -82,8 +82,8 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h5>{result[0].name}</h5>
-                <p>{result[0].msg}</p>
+                <h5>{result[5].name}</h5>
+                <p>{result[5].msg}</p>
               </SwiperSlide>
               <SwiperSlide>
                 <h5>123</h5>
