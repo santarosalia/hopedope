@@ -18,19 +18,16 @@ const Home = () => {
     },
   ]);
 
-  useEffect(
-    allMsg().then((results) => {
-      for (let i = 0; i < results.length - 1; i++) {
-        const dic = {
-          name: result[i].properties.name.title[0].text.content,
-          msg: result[i].properties.comment.rich_text[0].text.content,
-          pw: result[i].properties.pw.rich_text[0].text.content,
-        };
-        setResult([...result], dic);
-      }
-    }),
-    []
-  );
+  allMsg().then((results) => {
+    for (let i = 0; i < results.length - 1; i++) {
+      const dic = {
+        name: result[i].properties.name.title[0].text.content,
+        msg: result[i].properties.comment.rich_text[0].text.content,
+        pw: result[i].properties.pw.rich_text[0].text.content,
+      };
+      setResult([...result], dic);
+    }
+  });
 
   // console.log(result[0].properties.name.title[0].text.content);
   // console.log(result[0].properties.comment.rich_text[0].text.content);
