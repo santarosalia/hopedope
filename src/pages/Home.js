@@ -25,7 +25,12 @@ const Home = () => {
         msg: results[i].properties.comment.rich_text[0].text.content,
         pw: results[i].properties.pw.rich_text[0].text.content,
       };
+      console.log("dic name : " + dic.name);
       setResult([...result], dic);
+      result.map((val) => {
+        console.log(val.name);
+        console.log(val.msg);
+      });
     }
   });
 
