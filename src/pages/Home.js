@@ -25,8 +25,9 @@ const Home = () => {
         msg: results[i].properties.comment.rich_text[0].text.content,
         pw: results[i].properties.pw.rich_text[0].text.content,
       };
-
-      setResult([...result, dic]);
+      if (results[i] != "undefined" && results[i] != null) {
+        setResult([...result, dic]);
+      }
     }
   });
   result.map((val) => {
