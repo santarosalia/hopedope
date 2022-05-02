@@ -42,7 +42,7 @@ const Home = () => {
         },
       ];
 
-      setResult([...result, dic]);
+      setResult([...result, JSON.parse(dic)]);
     }
 
     console.log("result?string in" + result.length);
