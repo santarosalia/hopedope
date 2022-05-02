@@ -87,47 +87,13 @@ const Home = () => {
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
             >
-              <SwiperSlide>
-                <h5>{result.toString}</h5>
+              {result.map((val) => {
+                <SwiperSlide>
+                  <h5 key={val.name}>{val.name}</h5>
 
-                <p></p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <h5>123</h5>
-                <p>456</p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <h5>123</h5>
-                <p>456</p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <h5>123</h5>
-                <p>456</p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <h5>123</h5>
-                <p>456</p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <h5>123</h5>
-                <p>456</p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <h5>123</h5>
-                <p>456</p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <h5>123</h5>
-                <p>456</p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <h5>123</h5>
-                <p>456</p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <h5>123</h5>
-                <p>456</p>
-              </SwiperSlide>
+                  <p key={val.msg}>{val.msg}</p>
+                </SwiperSlide>;
+              })}
             </Swiper>
           </>
         </div>
