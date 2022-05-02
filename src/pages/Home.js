@@ -31,6 +31,8 @@ const Home = () => {
 
   const ax = async () => {
     const results = await allMsg();
+    console.log(results.length);
+
     for (let i = 0; i < results.length - 1; i++) {
       const dic = {
         name: results[i].properties.name.title[0].text.content,
