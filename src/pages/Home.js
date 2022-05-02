@@ -29,7 +29,7 @@ const Home = () => {
   //   });
   // }, []);
 
-  const ax = async () => {
+  async () => {
     const results = await allMsg();
     console.log(results.length);
 
@@ -48,13 +48,15 @@ const Home = () => {
 
     console.log("result?string in" + result.length);
     console.log("result?string in" + result[0].name);
-
-    // console.log("result?string in" + JSON.parse(result[0]));
+    const rend = () => {
+      return (
+        <SwiperSlide>
+          <h3>{result[0].name}</h3>
+          <p>{result[0].msg}</p>
+        </SwiperSlide>
+      );
+    };
   };
-  useEffect(() => {
-    ax();
-    console.log("result?string out" + result);
-  }, []);
 
   // console.log(result[0].properties.name.title[0].text.content);
   // console.log(result[0].properties.comment.rich_text[0].text.content);
@@ -103,10 +105,7 @@ const Home = () => {
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
             >
-              <SwiperSlide>
-                <h3></h3>
-                <p></p>
-              </SwiperSlide>
+              <rend />
             </Swiper>
           </>
         </div>
