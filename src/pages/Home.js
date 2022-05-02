@@ -14,11 +14,14 @@ const Home = () => {
 
   allMsg().then((results) => {
     setResult(results);
+    console.log(result[0].properties.name.title[0].text.content);
+    console.log(result[0].properties.comment.rich_text[0].text.content);
+    console.log(result[0].properties.pw.rich_text[0].text.content);
   });
 
-  console.log(result[0].properties.name.title[0].text.content);
-  console.log(result[0].properties.comment.rich_text[0].text.content);
-  console.log(result[0].properties.pw.rich_text[0].text.content);
+  // console.log(result[0].properties.name.title[0].text.content);
+  // console.log(result[0].properties.comment.rich_text[0].text.content);
+  // console.log(result[0].properties.pw.rich_text[0].text.content);
 
   return (
     <div className="home">
