@@ -28,11 +28,11 @@ const Home = () => {
       if (results[i] != "undefined" && results[i] != null) {
         setResult([...result, dic]);
       }
+      result.map((val) => {
+        console.log(val.name);
+        console.log(val.msg);
+      });
     }
-  });
-  result.map((val) => {
-    console.log(val.name);
-    console.log(val.msg);
   });
 
   // console.log(result[0].properties.name.title[0].text.content);
@@ -83,8 +83,8 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h5>{result[5].name}</h5>
-                <p>{result[5].msg}</p>
+                <h5></h5>
+                <p></p>
               </SwiperSlide>
               <SwiperSlide>
                 <h5>123</h5>
