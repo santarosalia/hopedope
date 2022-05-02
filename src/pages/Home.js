@@ -19,25 +19,20 @@ const Home = () => {
   ]);
   const [loading, setLoading] = useState(false);
 
-  const ax = () => {
-    allMsg().then((results) => {
-      setLoading(true);
+  allMsg().then((results) => {
+    setLoading(true);
 
-      for (let i = 0; i < results.length - 1; i++) {
-        const dic = {
-          name: results[i].properties.name.title[0].text.content,
-          msg: results[i].properties.comment.rich_text[0].text.content,
-          pw: results[i].properties.pw.rich_text[0].text.content,
-        };
+    for (let i = 0; i < results.length - 1; i++) {
+      const dic = {
+        name: results[i].properties.name.title[0].text.content,
+        msg: results[i].properties.comment.rich_text[0].text.content,
+        pw: results[i].properties.pw.rich_text[0].text.content,
+      };
 
-        setResult([...result, dic]);
-      }
-      setLoading(false);
-    });
-  };
-  useEffect(() => {
-    ax();
-  }, []);
+      setResult([...result, dic]);
+    }
+    setLoading(false);
+  });
 
   // console.log(result[0].properties.name.title[0].text.content);
   // console.log(result[0].properties.comment.rich_text[0].text.content);
@@ -88,10 +83,10 @@ const Home = () => {
               className="mySwiper"
             >
               {result.map((val) => {
-                <SwiperSlide>
+                <SwiperSlide key={val.name}>
                   <h5 key={val.name}>{val.name}</h5>
 
-                  <p key={val.msg}>{val.msg}</p>
+                  <p key={val.name}>{val.msg}</p>
                 </SwiperSlide>;
               })}
             </Swiper>
