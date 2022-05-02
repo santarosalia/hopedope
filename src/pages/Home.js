@@ -10,7 +10,13 @@ import { useState, useEffect } from "react";
 
 const { allMsg } = require("../axios");
 const Home = () => {
-  const [result, setResult] = useState([]);
+  const [result, setResult] = useState([
+    {
+      name: "이름",
+      msg: "메시지",
+      pw: "비밀번호",
+    },
+  ]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -83,9 +89,9 @@ const Home = () => {
             >
               {result.map((val) => {
                 <SwiperSlide key={val.name}>
-                  <h5 key={val.name}>{val.name}</h5>
+                  <h5>{val.name}</h5>
 
-                  <p key={val.name}>{val.msg}</p>
+                  <p>{val.msg}</p>
                 </SwiperSlide>;
               })}
             </Swiper>
