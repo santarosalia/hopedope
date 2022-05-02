@@ -46,8 +46,10 @@ const Home = () => {
           msg: results[i].properties.comment.rich_text[0].text.content,
           pw: results[i].properties.pw.rich_text[0].text.content,
         };
+        console.log("for문 안에서" + result);
 
         setResult([...result, dic]);
+        console.log("for문 안에서 setResult 하고" + result);
       }
       setLoading(false);
     });
@@ -108,11 +110,13 @@ const Home = () => {
               className="mySwiper"
             >
               {result.map((val) => {
-                <SwiperSlide key={val.name}>
-                  <h5>{val.name}</h5>
+                return (
+                  <SwiperSlide key={val.name}>
+                    <h5>{val.name}</h5>
 
-                  <p>{val.msg}</p>
-                </SwiperSlide>;
+                    <p>{val.msg}</p>
+                  </SwiperSlide>
+                );
               })}
             </Swiper>
           </>
