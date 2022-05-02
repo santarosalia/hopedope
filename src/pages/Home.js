@@ -17,7 +17,7 @@ const Home = () => {
       pw: "",
     },
   ]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const ax = () => {
     allMsg().then((results) => {
