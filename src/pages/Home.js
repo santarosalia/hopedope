@@ -26,7 +26,7 @@ const Home = () => {
         pw: results[i].properties.pw.rich_text[0].text.content,
       };
 
-      setResult([...result], dic);
+      setResult([...result, dic]);
     }
   });
   result.map((val) => {
