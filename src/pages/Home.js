@@ -10,13 +10,10 @@ import { useState } from "react";
 
 const { allMsg } = require("../axios");
 const Home = () => {
-  const [result, setResult] = useState(JSON);
+  const [result, setResult] = useState([]);
 
   allMsg().then((results) => {
-    setResult(results);
-    console.log(result[0].properties.name.title[0].text.content);
-    console.log(result[0].properties.comment.rich_text[0].text.content);
-    console.log(result[0].properties.pw.rich_text[0].text.content);
+    console.log(typeof results);
   });
 
   // console.log(result[0].properties.name.title[0].text.content);
