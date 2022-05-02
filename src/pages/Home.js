@@ -38,9 +38,7 @@ const Home = () => {
   useEffect(() => {
     ax();
   }, []);
-  result.map((val) => {
-    val.name;
-  });
+
   // console.log(result[0].properties.name.title[0].text.content);
   // console.log(result[0].properties.comment.rich_text[0].text.content);
   // console.log(result[0].properties.pw.rich_text[0].text.content);
