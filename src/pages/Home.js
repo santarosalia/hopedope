@@ -10,8 +10,13 @@ import { useState, useEffect } from "react";
 
 const { allMsg } = require("../axios");
 const Home = () => {
-  const [result, setResult] = useState([]);
-  let list = [];
+  const [result, setResult] = useState([
+    {
+      name: "",
+      msg: "",
+      pw: "",
+    },
+  ]);
 
   useEffect(
     allMsg().then((results) => {
@@ -22,7 +27,6 @@ const Home = () => {
           pw: result[i].properties.pw.rich_text[0].text.content,
         };
         setResult([...result], dic);
-        list.push(result);
       }
     }),
     []
