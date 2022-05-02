@@ -10,11 +10,7 @@ import { useState, useEffect } from "react";
 
 const { allMsg } = require("../axios");
 const Home = () => {
-  const [result, setResult] = useState({
-    name: "이름",
-    msg: "메시지",
-    pw: "비밀번호",
-  });
+  const [result, setResult] = useState(JSON);
 
   // useEffect(() => {
   //   allMsg().then((results) => {
@@ -36,23 +32,16 @@ const Home = () => {
   const ax = async () => {
     const results = await allMsg();
 
-    for (let i = 0; i < results.length - 1; i++) {
-      const dic = {
-        name: results[i].properties.name.title[0].text.content,
-        msg: results[i].properties.comment.rich_text[0].text.content,
-        pw: results[i].properties.pw.rich_text[0].text.content,
-      };
-      setResult(dic);
-    }
-    console.log("result size ?" + result.length);
+    setResult(results);
+
+    console.log("result?" + result);
   };
   useEffect(() => {
     ax();
   }, []);
 
-  console.log("리절트사이즈?" + result.length);
-  console.log(result.name);
-  console.log(result.msg);
+  console.log("리절트사이즈?" + result);
+
   // console.log(result[0].properties.name.title[0].text.content);
   // console.log(result[0].properties.comment.rich_text[0].text.content);
   // console.log(result[0].properties.pw.rich_text[0].text.content);
