@@ -45,7 +45,7 @@ const Home = () => {
       setResult([...result, dic]);
     }
 
-    console.log("result?string in" + result);
+    console.log("result?string in" + result.length);
   };
   useEffect(() => {
     ax();
