@@ -31,10 +31,10 @@ const Home = () => {
 
   const ax = async () => {
     const results = await allMsg();
-
+    console.log(results);
     setResult(results);
 
-    console.log("result?" + JSON.parse(result));
+    console.log("result?" + result);
   };
   useEffect(() => {
     ax();
