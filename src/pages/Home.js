@@ -11,6 +11,13 @@ import { useState, useEffect } from "react";
 const { allMsg } = require("../axios");
 const Home = () => {
   const [result, setResult] = useState(null);
+  const [output, setOutput] = useState([
+    {
+      name: "",
+      msg: "",
+      pw: "",
+    },
+  ]);
 
   // useEffect(() => {
   //   allMsg().then((results) => {
@@ -59,7 +66,14 @@ const Home = () => {
   useEffect(() => {
     allMsg().then((results) => {
       setResult(results);
-      console.log(result);
+      for (let i = 0; i < results.length - 1; i++) {
+        const dic = {
+          name: results[i].properties.name.title[0].text.content,
+          msg: results[i].properties.comment.rich_text[0].text.content,
+          pw: results[i].properties.pw.rich_text[0].text.content,
+        };
+        setOutput([...output, dic]);
+      }
     });
   });
 
@@ -111,7 +125,7 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h3>{result}</h3>
+                <h3>{output[0].name}</h3>
               </SwiperSlide>
             </Swiper>
           </>
