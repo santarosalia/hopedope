@@ -20,7 +20,11 @@ const Home = () => {
           name: results[i].properties.name.title[0].text.content,
           msg: results[i].properties.comment.rich_text[0].text.content,
         };
-        let list = output;
+        let list = [];
+        if (output != null) {
+          list = output;
+        }
+
         list.push(dic);
         setOutput(list);
       }
