@@ -11,7 +11,10 @@ import { useState, useEffect } from "react";
 const { allMsg } = require("../axios");
 const Home = () => {
   const [result, setResult] = useState(null);
-  const [output, setOutput] = useState([]);
+  const [output, setOutput] = useState({
+    name: "",
+    msg: "",
+  });
 
   useEffect(() => {
     allMsg().then((results) => {
@@ -20,13 +23,9 @@ const Home = () => {
           name: results[i].properties.name.title[0].text.content,
           msg: results[i].properties.comment.rich_text[0].text.content,
         };
-        let list = [];
-        if (output != null) {
-          list = output;
-        }
 
-        list.push(dic);
-        setOutput(list);
+        setOutput([...output, dic]);
+        console.log(output);
       }
       setResult(results);
     });
@@ -76,7 +75,7 @@ const Home = () => {
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
             >
-              <SwiperSlide>{output[0]}</SwiperSlide>
+              <SwiperSlide></SwiperSlide>
               <SwiperSlide></SwiperSlide>
             </Swiper>
           </>
