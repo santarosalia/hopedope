@@ -13,9 +13,9 @@ const Home = () => {
   const [result, setResult] = useState(null);
   const [output, setOutput] = useState([
     {
-      name: "",
-      msg: "",
-      pw: "",
+      name: null,
+      msg: null,
+      pw: null,
     },
   ]);
 
@@ -82,7 +82,7 @@ const Home = () => {
   // console.log(result[0].properties.name.title[0].text.content);
   // console.log(result[0].properties.comment.rich_text[0].text.content);
   // console.log(result[0].properties.pw.rich_text[0].text.content);
-  if (result == null) return <h2>Loading posts...</h2>;
+  if (output[0].name == null) return <h2>Loading posts...</h2>;
   return (
     <div className="home">
       <div className="body">
