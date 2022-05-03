@@ -32,6 +32,8 @@ const Home = () => {
     <div className="home">
       <div className="body">
         <div className="box">text</div>
+        <br></br>
+        <br></br>
         <div id="react-naver-map" className="naverMap">
           <RenderAfterNavermapsLoaded ncpClientId={"chnhlyto0x"}>
             <NaverMap
@@ -46,8 +48,12 @@ const Home = () => {
               <Marker position={{ lat: 37.521602, lng: 126.890874 }} />
             </NaverMap>
           </RenderAfterNavermapsLoaded>
-          <div>주소 : 주소</div>
-          <div>전화번호 : 전화번호</div>
+        </div>
+        <br></br>
+        <br></br>
+        <div>
+          <h4>주소 : 주소</h4>
+          <h4>전화번호 : 전화번호</h4>
         </div>
 
         <div>
