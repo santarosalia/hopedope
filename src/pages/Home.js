@@ -59,6 +59,7 @@ const Home = () => {
   useEffect(() => {
     allMsg().then((results) => {
       setResult(results);
+      console.log(result);
     });
   });
 
@@ -110,7 +111,7 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h3>{result[0]}</h3>
+                <h3>{result}</h3>
               </SwiperSlide>
             </Swiper>
           </>
