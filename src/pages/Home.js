@@ -23,7 +23,7 @@ const Home = () => {
       <div>
         <h2>loading...</h2>
         <img
-          style={{ width: "100vw" }}
+          style={{ width: "100%" }}
           src="https://raw.githubusercontent.com/santarosalia/hopedope/master/public/img/loading.gif"
         ></img>
       </div>
