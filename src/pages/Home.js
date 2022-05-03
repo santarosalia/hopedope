@@ -49,6 +49,7 @@ const Home = () => {
               grabCursor={true}
               centeredSlides={true}
               slidesPerView={"auto"}
+              autoplay={true}
               coverflowEffect={{
                 rotate: 50,
                 stretch: 0,
@@ -61,27 +62,27 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h3>{result[0].name}</h3>
+                <h4>{result[0].name}</h4>
                 <p>{result[0].msg}</p>
               </SwiperSlide>
               <SwiperSlide>
-                <h3>{result[1].name}</h3>
+                <h4>{result[1].name}</h4>
                 <p>{result[1].msg}</p>
               </SwiperSlide>
               <SwiperSlide>
-                <h3>{result[2].name}</h3>
+                <h4>{result[2].name}</h4>
                 <p>{result[2].msg}</p>
               </SwiperSlide>
               <SwiperSlide>
-                <h3>{result[3].name}</h3>
+                <h4>{result[3].name}</h4>
                 <p>{result[3].msg}</p>
               </SwiperSlide>
               <SwiperSlide>
-                <h3>{result[4].name}</h3>
+                <h4>{result[4].name}</h4>
                 <p>{result[4].msg}</p>
               </SwiperSlide>
               <SwiperSlide>
-                <h3>{result[5].name}</h3>
+                <h4>{result[5].name}</h4>
                 <p>{result[5].msg}</p>
               </SwiperSlide>
             </Swiper>
