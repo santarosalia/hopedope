@@ -16,7 +16,12 @@ const Home = () => {
     setResult(results);
   });
 
-  if (result == null) return <h2>Loading posts...</h2>;
+  if (result == null)
+    return (
+      <div>
+        <img src="https://raw.githubusercontent.com/santarosalia/hopedope/master/public/img/loading.gif"></img>
+      </div>
+    );
   return (
     <div className="home">
       <div className="body">
@@ -32,14 +37,10 @@ const Home = () => {
               defaultCenter={{ lat: 37.521602, lng: 126.890874 }}
               defaultZoom={15}
             >
-              <Marker
-                position={{ lat: 37.521602, lng: 126.890874 }}
-                onClick={() => {
-                  alert("here");
-                }}
-                title={"우리집"}
-              />
+              <Marker position={{ lat: 37.521602, lng: 126.890874 }} />
             </NaverMap>
+            <div>주소 : 주소</div>
+            <div>전화번호 : 전화번호</div>
           </RenderAfterNavermapsLoaded>
         </div>
         <div>
