@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 
 const { allMsg } = require("../axios");
 const Home = () => {
-  const [result, setResult] = useState([]);
+  const [result, setResult] = useState(null);
 
   // useEffect(() => {
   //   allMsg().then((results) => {
@@ -56,11 +56,16 @@ const Home = () => {
       </SwiperSlide>
     );
   };
+  useEffect(() => {
+    allMsg().then((results) => {
+      setResult(results);
+    });
+  });
 
   // console.log(result[0].properties.name.title[0].text.content);
   // console.log(result[0].properties.comment.rich_text[0].text.content);
   // console.log(result[0].properties.pw.rich_text[0].text.content);
-
+  if (result == null) return <h2>Loading posts...</h2>;
   return (
     <div className="home">
       <div className="body">
@@ -104,7 +109,9 @@ const Home = () => {
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
             >
-              <ax />
+              <SwiperSlide>
+                <h3>{result[0]}</h3>
+              </SwiperSlide>
             </Swiper>
           </>
         </div>
