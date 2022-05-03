@@ -67,11 +67,13 @@ const Home = () => {
     allMsg().then((results) => {
       setResult(results);
       for (let i = 0; i < results.length - 1; i++) {
-        const dic = {
-          name: results[i].properties.name.title[0].text.content,
-          msg: results[i].properties.comment.rich_text[0].text.content,
-          pw: results[i].properties.pw.rich_text[0].text.content,
-        };
+        const dic = [
+          {
+            name: results[i].properties.name.title[0].text.content,
+            msg: results[i].properties.comment.rich_text[0].text.content,
+            pw: results[i].properties.pw.rich_text[0].text.content,
+          },
+        ];
         setOutput([...output, dic]);
       }
     });
