@@ -34,18 +34,18 @@ const Home = () => {
   const [open2, setOpen2] = React.useState(false);
 
   const handleClickOpen1 = () => {
-    setOpen(true);
+    setOpen1(true);
   };
 
   const handleClose1 = () => {
-    setOpen(false);
+    setOpen1(false);
   };
   const handleClickOpen2 = () => {
-    setOpen(true);
+    setOpen2(true);
   };
 
   const handleClose2 = () => {
-    setOpen(false);
+    setOpen2(false);
   };
 
   if (result == null)
@@ -90,7 +90,7 @@ const Home = () => {
         </div>
         <div className="info">
           <div>
-            <Button variant="outlined" onClick={handleClickOpen}>
+            <Button variant="outlined" onClick={handleClickOpen1}>
               보기
             </Button>
             <Dialog
