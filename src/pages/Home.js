@@ -72,43 +72,43 @@ const Home = () => {
                 <h4>{result[0].name}</h4>
                 <p>{result[0].msg}</p>
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
                 <h4>{result[1].name}</h4>
                 <p>{result[1].msg}</p>
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
                 <h4>{result[2].name}</h4>
                 <p>{result[2].msg}</p>
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
                 <h4>{result[3].name}</h4>
                 <p>{result[3].msg}</p>
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
                 <h4>{result[4].name}</h4>
                 <p>{result[4].msg}</p>
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
                 <h4>{result[5].name}</h4>
                 <p>{result[5].msg}</p>
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
                 <h4>{result[6].name}</h4>
                 <p>{result[6].msg}</p>
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
                 <h4>{result[7].name}</h4>
                 <p>{result[7].msg}</p>
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
                 <h4>{result[8].name}</h4>
                 <p>{result[8].msg}</p>
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
                 <h4>{result[9].name}</h4>
                 <p>{result[9].msg}</p>
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
                 <h4>{result[10].name}</h4>
                 <p>{result[10].msg}</p>
               </SwiperSlide>
