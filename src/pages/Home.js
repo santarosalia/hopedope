@@ -101,7 +101,7 @@ const Home = () => {
               onClose={handleClose1}
               aria-describedby="alert-dialog-slide-description1"
             >
-              <DialogTitle>{"title"}</DialogTitle>
+              <DialogTitle>{"title111"}</DialogTitle>
               <DialogContent>
                 <DialogContentText id="alert-dialog-slide-description1">
                   <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
@@ -123,7 +123,7 @@ const Home = () => {
               onClose={handleClose2}
               aria-describedby="alert-dialog-slide-description2"
             >
-              <DialogTitle>{"title"}</DialogTitle>
+              <DialogTitle>{"title222"}</DialogTitle>
               <DialogContent>
                 <DialogContentText id="alert-dialog-slide-description2">
                   <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
