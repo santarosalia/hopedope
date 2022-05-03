@@ -21,7 +21,7 @@ const Home = () => {
           msg: results[i].properties.comment.rich_text[0].text.content,
         };
 
-        setOutput([...output, dic]);
+        setOutput([dic, ...output]);
         console.log(output.length);
       }
       setResult(results);
