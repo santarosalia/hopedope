@@ -7,7 +7,6 @@ import "swiper/css/pagination";
 import "./swiper.css";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 import { useState, useEffect } from "react";
-import CallIcon from "@mui/icons-material/Call";
 import * as React from "react";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
@@ -26,10 +25,12 @@ const Home = () => {
       setResult(results);
     });
   });
-  const Transition = React.forwardRef(function Transition(props, ref) {
+  const Transition1 = React.forwardRef(function Transition1(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
   });
-
+  const Transition2 = React.forwardRef(function Transition2(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+  });
   const [open1, setOpen1] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
 
@@ -95,7 +96,7 @@ const Home = () => {
             </Button>
             <Dialog
               open={open1}
-              TransitionComponent={Transition}
+              TransitionComponent={Transition1}
               keepMounted
               onClose={handleClose1}
               aria-describedby="alert-dialog-slide-description1"
@@ -117,7 +118,7 @@ const Home = () => {
             </Button>
             <Dialog
               open={open2}
-              TransitionComponent={Transition}
+              TransitionComponent={Transition2}
               keepMounted
               onClose={handleClose2}
               aria-describedby="alert-dialog-slide-description2"

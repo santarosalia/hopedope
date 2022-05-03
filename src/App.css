@@ -11,7 +11,7 @@ header {
   padding-right: 10%;
   margin-bottom: 5vh;
 }
-Link {
+.header a {
   text-decoration: none;
   text-align: center;
   float: left;
