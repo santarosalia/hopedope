@@ -73,9 +73,12 @@ const Home = () => {
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
             >
-              <SwiperSlide>
-                <h3>{result[0].properties.name.title[0].text.content}</h3>
-              </SwiperSlide>
+              {result.map((item) => {
+                <SwiperSlide>
+                  <h3>{item.properties.name.title[0].text.content}</h3>
+                  <p>{item.properties.comment.rich_text[0].text.content}</p>
+                </SwiperSlide>;
+              })}
             </Swiper>
           </>
         </div>
