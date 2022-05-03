@@ -21,7 +21,11 @@ const Home = () => {
   if (result == null)
     return (
       <div>
-        <img src="https://raw.githubusercontent.com/santarosalia/hopedope/master/public/img/loading.gif"></img>
+        <h2>loading...</h2>
+        <img
+          style={{ width: "100vw" }}
+          src="https://raw.githubusercontent.com/santarosalia/hopedope/master/public/img/loading.gif"
+        ></img>
       </div>
     );
   return (
