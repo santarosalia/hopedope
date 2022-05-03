@@ -36,45 +36,18 @@ const Home = () => {
   //   });
   // }, []);
 
-  const ax = async () => {
-    const results = await allMsg();
-    console.log(results.length);
-
-    for (let i = 0; i < results.length - 1; i++) {
-      const dic = {
-        name: results[i].properties.name.title[0].text.content,
-        msg: results[i].properties.comment.rich_text[0].text.content,
-        pw: results[i].properties.pw.rich_text[0].text.content,
-      };
-
-      let list = result;
-      list.push(dic);
-
-      setResult(list);
-    }
-
-    console.log("result?string in" + result.length);
-    console.log("result?string in" + result[0].name);
-
-    return (
-      <SwiperSlide>
-        <h3>{result[0].name}</h3>
-        <p>{result[0].msg}</p>
-      </SwiperSlide>
-    );
-  };
   useEffect(() => {
     allMsg().then((results) => {
       setResult(results);
       for (let i = 0; i < results.length - 1; i++) {
-        const dic = [
-          {
-            name: results[i].properties.name.title[0].text.content,
-            msg: results[i].properties.comment.rich_text[0].text.content,
-            pw: results[i].properties.pw.rich_text[0].text.content,
-          },
-        ];
-        setOutput([...output, dic]);
+        const dic = {
+          name: results[i].properties.name.title[0].text.content,
+          msg: results[i].properties.comment.rich_text[0].text.content,
+          pw: results[i].properties.pw.rich_text[0].text.content,
+        };
+        let list = output;
+        list.push(dic);
+        setOutput(list);
       }
     });
   });
