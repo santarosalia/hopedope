@@ -85,6 +85,26 @@ const Home = () => {
                 <h4>{result[5].name}</h4>
                 <p>{result[5].msg}</p>
               </SwiperSlide>
+              <SwiperSlide>
+                <h4>{result[6].name}</h4>
+                <p>{result[6].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h4>{result[7].name}</h4>
+                <p>{result[7].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h4>{result[8].name}</h4>
+                <p>{result[8].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h4>{result[9].name}</h4>
+                <p>{result[9].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h4>{result[10].name}</h4>
+                <p>{result[10].msg}</p>
+              </SwiperSlide>
             </Swiper>
           </>
         </div>
