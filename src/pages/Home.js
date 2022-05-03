@@ -53,7 +53,7 @@ const Home = () => {
         setOutput(list);
       }
     });
-  });
+  }, []);
 
   // console.log(result[0].properties.name.title[0].text.content);
   // console.log(result[0].properties.comment.rich_text[0].text.content);
