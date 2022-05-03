@@ -49,9 +49,8 @@ const Home = () => {
             </NaverMap>
           </RenderAfterNavermapsLoaded>
         </div>
-        <br></br>
-        <br></br>
-        <div>
+
+        <div className="address">
           <h4>
             <a href="https://map.naver.com/v5/search/선유로88-8/address/"></a>
             주소 : 주소
