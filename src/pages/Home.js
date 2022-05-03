@@ -12,8 +12,10 @@ const { allMsg } = require("../axios");
 const Home = () => {
   const [result, setResult] = useState(null);
 
-  allMsg().then((results) => {
-    setResult(results);
+  useEffect(() => {
+    allMsg().then((results) => {
+      setResult(results);
+    });
   });
 
   if (result == null)
