@@ -19,4 +19,5 @@
 .address {
   border: 1px black solid;
   width: 80%;
+  height: 10vh;
 }
