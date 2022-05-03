@@ -30,13 +30,21 @@ const Home = () => {
     return <Slide direction="up" ref={ref} {...props} />;
   });
 
-  const [open, setOpen] = React.useState(false);
+  const [open1, setOpen1] = React.useState(false);
+  const [open2, setOpen2] = React.useState(false);
 
-  const handleClickOpen = () => {
+  const handleClickOpen1 = () => {
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const handleClose1 = () => {
+    setOpen(false);
+  };
+  const handleClickOpen2 = () => {
+    setOpen(true);
+  };
+
+  const handleClose2 = () => {
     setOpen(false);
   };
 
@@ -86,10 +94,10 @@ const Home = () => {
               보기
             </Button>
             <Dialog
-              open={open}
+              open={open1}
               TransitionComponent={Transition}
               keepMounted
-              onClose={handleClose}
+              onClose={handleClose1}
               aria-describedby="alert-dialog-slide-description1"
             >
               <DialogTitle>{"title"}</DialogTitle>
@@ -99,19 +107,19 @@ const Home = () => {
                 </DialogContentText>
               </DialogContent>
               <DialogActions>
-                <Button onClick={handleClose}>close</Button>
+                <Button onClick={handleClose1}>close</Button>
               </DialogActions>
             </Dialog>
           </div>
           <div>
-            <Button variant="outlined" onClick={handleClickOpen}>
+            <Button variant="outlined" onClick={handleClickOpen2}>
               보기
             </Button>
             <Dialog
-              open={open}
+              open={open2}
               TransitionComponent={Transition}
               keepMounted
-              onClose={handleClose}
+              onClose={handleClose2}
               aria-describedby="alert-dialog-slide-description2"
             >
               <DialogTitle>{"title"}</DialogTitle>
@@ -121,7 +129,7 @@ const Home = () => {
                 </DialogContentText>
               </DialogContent>
               <DialogActions>
-                <Button onClick={handleClose}>close</Button>
+                <Button onClick={handleClose2}>close</Button>
               </DialogActions>
             </Dialog>
           </div>
