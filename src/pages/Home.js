@@ -32,9 +32,6 @@ const Home = () => {
     });
   }, []);
 
-  // console.log(result[0].properties.name.title[0].text.content);
-  // console.log(result[0].properties.comment.rich_text[0].text.content);
-  // console.log(result[0].properties.pw.rich_text[0].text.content);
   if (output == null) return <h2>Loading posts...</h2>;
   return (
     <div className="home">
@@ -79,8 +76,8 @@ const Home = () => {
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
             >
-              {output.map((item) => {
-                <SwiperSlide>
+              {output.map((item, idx) => {
+                <SwiperSlide key={idx}>
                   <h3>{item.name}</h3>
                   <p>{item.msg}</p>
                 </SwiperSlide>;
