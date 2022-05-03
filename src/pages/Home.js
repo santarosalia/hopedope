@@ -7,6 +7,31 @@ import "swiper/css/pagination";
 import "./swiper.css";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 import { useState, useEffect } from "react";
+import CallIcon from "@mui/icons-material/Call";
+import * as React from "react";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import Slide from "@mui/material/Slide";
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
+function AlertDialogSlide() {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+}
 
 const { allMsg } = require("../axios");
 const Home = () => {
@@ -54,8 +79,55 @@ const Home = () => {
           <a href="https://map.naver.com/v5/search/선유로88-8/address/">
             주소 : 주소
           </a>
+          <br></br>
 
           <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
+        </div>
+        <div className="info">
+          <div>
+            <Button variant="outlined" onClick={handleClickOpen}>
+              보기
+            </Button>
+            <Dialog
+              open={open}
+              TransitionComponent={Transition}
+              keepMounted
+              onClose={handleClose}
+              aria-describedby="alert-dialog-slide-description1"
+            >
+              <DialogTitle>{"title"}</DialogTitle>
+              <DialogContent>
+                <DialogContentText id="alert-dialog-slide-description1">
+                  <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={handleClose}>close</Button>
+              </DialogActions>
+            </Dialog>
+          </div>
+          <div>
+            <Button variant="outlined" onClick={handleClickOpen}>
+              보기
+            </Button>
+            <Dialog
+              open={open}
+              TransitionComponent={Transition}
+              keepMounted
+              onClose={handleClose}
+              aria-describedby="alert-dialog-slide-description2"
+            >
+              <DialogTitle>{"title"}</DialogTitle>
+              <DialogContent>
+                <DialogContentText id="alert-dialog-slide-description2">
+                  <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={handleClose}>close</Button>
+              </DialogActions>
+            </Dialog>
+          </div>
         </div>
 
         <div>

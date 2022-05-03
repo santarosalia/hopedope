@@ -51,11 +51,7 @@ const Msg = () => {
           <br></br>
           <button
             type="submit"
-            onClick={() =>
-              addComment(name, comment, pw).then(() => {
-                window.location.reload();
-              })
-            }
+            onClick={() => addComment(name, comment, pw).then()}
           >
             등록
           </button>

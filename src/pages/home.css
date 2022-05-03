@@ -22,3 +22,6 @@
   height: 10vh;
   margin: 0 auto;
 }
+.address a {
+  text-align: center;
+}

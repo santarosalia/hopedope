@@ -11,13 +11,6 @@ header {
   padding-right: 10%;
   margin-bottom: 5vh;
 }
-a {
-  text-decoration: none;
-  text-align: center;
-  float: left;
-  width: 25%;
-  color: #000;
-}
 
 .snow-bg {
   content: "";
