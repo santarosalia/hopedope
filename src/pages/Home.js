@@ -63,10 +63,12 @@ const Home = () => {
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
             >
-              <SwiperSlide>
-                <h3>{result[0].name}</h3>
-              </SwiperSlide>
-              <SwiperSlide></SwiperSlide>
+              {result.map((val) => {
+                <SwiperSlide>
+                  <h3>{val.name}</h3>
+                  <p>{val.msg}</p>
+                </SwiperSlide>;
+              })}
             </Swiper>
           </>
         </div>
