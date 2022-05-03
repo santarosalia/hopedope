@@ -11,7 +11,7 @@ import { useState, useEffect } from "react";
 const { allMsg } = require("../axios");
 const Home = () => {
   const [result, setResult] = useState(null);
-  const [output, setOutput] = useState(null);
+  const [output, setOutput] = useState([]);
 
   useEffect(() => {
     allMsg().then((results) => {
@@ -76,7 +76,7 @@ const Home = () => {
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
             >
-              <SwiperSlide></SwiperSlide>
+              <SwiperSlide>{output[0].name}</SwiperSlide>
               <SwiperSlide></SwiperSlide>
             </Swiper>
           </>
