@@ -76,7 +76,7 @@ const Home = () => {
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
             >
-              <SwiperSlide>{output[0].name}</SwiperSlide>
+              <SwiperSlide>{output[0]}</SwiperSlide>
               <SwiperSlide></SwiperSlide>
             </Swiper>
           </>
