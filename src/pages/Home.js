@@ -11,10 +11,12 @@ import { useState, useEffect } from "react";
 const { allMsg } = require("../axios");
 const Home = () => {
   const [result, setResult] = useState(null);
-  const [output, setOutput] = useState({
-    name: "",
-    msg: "",
-  });
+  const [output, setOutput] = useState([
+    {
+      name: "",
+      msg: "",
+    },
+  ]);
 
   useEffect(() => {
     allMsg().then((results) => {
@@ -25,7 +27,7 @@ const Home = () => {
         };
 
         setOutput([...output, dic]);
-        console.log(output);
+        console.log(output.length);
       }
       setResult(results);
     });
