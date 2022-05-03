@@ -11,19 +11,16 @@ import { useState, useEffect } from "react";
 const { allMsg } = require("../axios");
 const Home = () => {
   const [result, setResult] = useState(null);
-  const [output, setOutput] = useState([]);
 
-  useEffect(() => {
-    allMsg().then((results) => {
-      setResult(results);
-    });
-  }, []);
+  allMsg().then((results) => {
+    setResult(results);
+  });
 
   if (result == null) return <h2>Loading posts...</h2>;
   return (
     <div className="home">
       <div className="body">
-        <div className="box">안녕하세용</div>
+        <div className="box">text</div>
         <div id="react-naver-map" className="naverMap">
           <RenderAfterNavermapsLoaded ncpClientId={"chnhlyto0x"}>
             <NaverMap
@@ -63,12 +60,30 @@ const Home = () => {
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
             >
-              {result.map((val) => {
-                <SwiperSlide>
-                  <h3>{val.name}</h3>
-                  <p>{val.msg}</p>
-                </SwiperSlide>;
-              })}
+              <SwiperSlide>
+                <h3>{result[0].name}</h3>
+                <p>{result[0].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h3>{result[1].name}</h3>
+                <p>{result[1].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h3>{result[2].name}</h3>
+                <p>{result[2].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h3>{result[3].name}</h3>
+                <p>{result[3].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h3>{result[4].name}</h3>
+                <p>{result[4].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <h3>{result[5].name}</h3>
+                <p>{result[5].msg}</p>
+              </SwiperSlide>
             </Swiper>
           </>
         </div>
