@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "./swiper.css";
-import { EffectCoverflow, Pagination } from "swiper";
+import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 import { useState, useEffect } from "react";
 
 const { allMsg } = require("../axios");
@@ -56,7 +56,7 @@ const Home = () => {
               grabCursor={true}
               centeredSlides={true}
               slidesPerView={"auto"}
-              autoplay={true}
+              autoplay={{ delay: 2500, disableOnInteraction: false }}
               coverflowEffect={{
                 rotate: 50,
                 stretch: 0,
@@ -65,10 +65,10 @@ const Home = () => {
                 slideShadows: false,
               }}
               pagination={false}
-              modules={[EffectCoverflow, Pagination]}
+              modules={[EffectCoverflow, Pagination, Autoplay]}
               className="mySwiper"
             >
-              <SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
                 <h4>{result[0].name}</h4>
                 <p>{result[0].msg}</p>
               </SwiperSlide>
