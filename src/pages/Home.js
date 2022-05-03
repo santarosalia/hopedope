@@ -15,20 +15,11 @@ const Home = () => {
 
   useEffect(() => {
     allMsg().then((results) => {
-      for (let i = 0; i < results.length; i++) {
-        const dic = {
-          name: results[i].properties.name.title[0].text.content,
-          msg: results[i].properties.comment.rich_text[0].text.content,
-        };
-
-        setOutput([dic, ...output]);
-        console.log(output.length);
-      }
       setResult(results);
     });
   }, []);
 
-  if (output == null) return <h2>Loading posts...</h2>;
+  if (result == null) return <h2>Loading posts...</h2>;
   return (
     <div className="home">
       <div className="body">
@@ -72,7 +63,9 @@ const Home = () => {
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
             >
-              <SwiperSlide></SwiperSlide>
+              <SwiperSlide>
+                <h3>{result[0].name}</h3>
+              </SwiperSlide>
               <SwiperSlide></SwiperSlide>
             </Swiper>
           </>

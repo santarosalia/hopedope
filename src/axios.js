@@ -78,7 +78,16 @@ const allMsg = async () => {
   const result = await axios
     .request(options)
     .then(function (response) {
-      return response.data.results;
+      let list = [];
+      for (let i = 0; i < response.data.results.length; i++) {
+        const dic = {
+          name: response.data.results[i].properties.name.title[0].text.content,
+          msg: response.data.results[i].properties.comment.rich_text[0].text
+            .content,
+        };
+        list.push(dic);
+      }
+      return list;
     })
     .catch(function (error) {
       console.error(error);
