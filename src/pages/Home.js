@@ -19,48 +19,17 @@ const Home = () => {
     },
   ]);
 
-  // useEffect(() => {
-  //   allMsg().then((results) => {
-  //     setLoading(true);
-
-  //     for (let i = 0; i < results.length - 1; i++) {
-  //       const dic = {
-  //         name: results[i].properties.name.title[0].text.content,
-  //         msg: results[i].properties.comment.rich_text[0].text.content,
-  //         pw: results[i].properties.pw.rich_text[0].text.content,
-  //       };
-
-  //       setResult([...result, dic]);
-  //     }
-  //     setLoading(false);
-  //   });
-  // }, []);
-
   useEffect(() => {
     allMsg().then((results) => {
       setResult(results);
-      console.log(result);
-      for (let i = 0; i < results.length - 1; i++) {
-        const dic = {
-          name: results[i].properties.name.title[0].text.content,
-          msg: results[i].properties.comment.rich_text[0].text.content,
-          pw: results[i].properties.pw.rich_text[0].text.content,
-        };
-        console.log(dic.name);
-        let list = output;
-        list.push(dic);
-        if (list[0].msg == null) {
-          setOutput([dic]);
-        }
-        setOutput(list);
-      }
+      console.log("result?!?!?" + result);
     });
   }, []);
 
   // console.log(result[0].properties.name.title[0].text.content);
   // console.log(result[0].properties.comment.rich_text[0].text.content);
   // console.log(result[0].properties.pw.rich_text[0].text.content);
-  if (output[0].name == null) return <h2>Loading posts...</h2>;
+  if (result == null) return <h2>Loading posts...</h2>;
   return (
     <div className="home">
       <div className="body">
@@ -105,7 +74,7 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h3>{output[0].name}</h3>
+                <h3>{result[0].properties.name.title[0].text.content}</h3>
               </SwiperSlide>
             </Swiper>
           </>
