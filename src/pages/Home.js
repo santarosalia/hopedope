@@ -47,6 +47,9 @@ const Home = () => {
         };
         let list = output;
         list.push(dic);
+        if (list[0].msg == null) {
+          setOutput(dic);
+        }
         setOutput(list);
       }
     });
