@@ -52,8 +52,13 @@ const Home = () => {
         <br></br>
         <br></br>
         <div>
-          <h4>주소 : 주소</h4>
-          <h4>전화번호 : 전화번호</h4>
+          <h4>
+            <a href="https://map.naver.com/v5/search/선유로88-8/address/"></a>
+            주소 : 주소
+          </h4>
+          <h4>
+            <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
+          </h4>
         </div>
 
         <div>
