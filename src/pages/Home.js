@@ -77,12 +77,12 @@ const Home = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <h3>{output[0].name}</h3>
-                <p>{output[0].msg}</p>
+                <h3>{output[0]["name"]}</h3>
+                <p>{output[0]["msg"]}</p>
               </SwiperSlide>
               <SwiperSlide>
-                <h3>{output[1].name}</h3>
-                <p>{output[1].msg}</p>
+                <h3>{output[1]["name"]}</h3>
+                <p>{output[1]["msg"]}</p>
               </SwiperSlide>
             </Swiper>
           </>
