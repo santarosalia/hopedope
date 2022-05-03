@@ -149,10 +149,6 @@ const Home = () => {
                 <h4>{result[19].name}</h4>
                 <p>{result[19].msg}</p>
               </SwiperSlide>
-              <SwiperSlide style={{ backgroundColor: "white" }}>
-                <h4>{result[20].name}</h4>
-                <p>{result[20].msg}</p>
-              </SwiperSlide>
             </Swiper>
           </>
         </div>
