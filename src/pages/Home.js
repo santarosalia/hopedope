@@ -11,12 +11,7 @@ import { useState, useEffect } from "react";
 const { allMsg } = require("../axios");
 const Home = () => {
   const [result, setResult] = useState(null);
-  const [output, setOutput] = useState([
-    {
-      name: "",
-      msg: "",
-    },
-  ]);
+  const [output, setOutput] = useState([]);
 
   useEffect(() => {
     allMsg().then((results) => {
