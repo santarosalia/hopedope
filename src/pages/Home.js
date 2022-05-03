@@ -45,10 +45,11 @@ const Home = () => {
             >
               <Marker position={{ lat: 37.521602, lng: 126.890874 }} />
             </NaverMap>
-            <div>주소 : 주소</div>
-            <div>전화번호 : 전화번호</div>
           </RenderAfterNavermapsLoaded>
+          <div>주소 : 주소</div>
+          <div>전화번호 : 전화번호</div>
         </div>
+
         <div>
           <>
             <Swiper
@@ -111,6 +112,46 @@ const Home = () => {
               <SwiperSlide style={{ backgroundColor: "white" }}>
                 <h4>{result[10].name}</h4>
                 <p>{result[10].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
+                <h4>{result[11].name}</h4>
+                <p>{result[11].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
+                <h4>{result[12].name}</h4>
+                <p>{result[12].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
+                <h4>{result[13].name}</h4>
+                <p>{result[13].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
+                <h4>{result[14].name}</h4>
+                <p>{result[14].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
+                <h4>{result[15].name}</h4>
+                <p>{result[15].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
+                <h4>{result[16].name}</h4>
+                <p>{result[16].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
+                <h4>{result[17].name}</h4>
+                <p>{result[17].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
+                <h4>{result[18].name}</h4>
+                <p>{result[18].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
+                <h4>{result[19].name}</h4>
+                <p>{result[19].msg}</p>
+              </SwiperSlide>
+              <SwiperSlide style={{ backgroundColor: "white" }}>
+                <h4>{result[20].name}</h4>
+                <p>{result[20].msg}</p>
               </SwiperSlide>
             </Swiper>
           </>

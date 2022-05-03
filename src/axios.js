@@ -72,7 +72,7 @@ const allMsg = async () => {
       "Notion-Version": "2022-02-22",
       Authorization: token,
     },
-    data: { page_size: 100 },
+    data: { page_size: 20 },
   };
 
   const result = await axios
