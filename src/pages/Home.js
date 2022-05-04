@@ -112,7 +112,7 @@ const Home = () => {
               </DialogActions>
             </Dialog>
           </div>
-          <div>
+          {/* <div>
             <Button variant="outlined" onClick={handleClickOpen2}>
               보기
             </Button>
@@ -133,7 +133,7 @@ const Home = () => {
                 <Button onClick={handleClose2}>close</Button>
               </DialogActions>
             </Dialog>
-          </div>
+          </div> */}
         </div>
 
         <div>
