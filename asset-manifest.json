@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/hopedope/static/css/main.b089294c.css",
-    "main.js": "/hopedope/static/js/main.22d0626a.js",
+    "main.js": "/hopedope/static/js/main.e8e8d0f2.js",
     "static/js/787.460ff9ff.chunk.js": "/hopedope/static/js/787.460ff9ff.chunk.js",
     "index.html": "/hopedope/index.html",
     "main.b089294c.css.map": "/hopedope/static/css/main.b089294c.css.map",
-    "main.22d0626a.js.map": "/hopedope/static/js/main.22d0626a.js.map",
+    "main.e8e8d0f2.js.map": "/hopedope/static/js/main.e8e8d0f2.js.map",
     "787.460ff9ff.chunk.js.map": "/hopedope/static/js/787.460ff9ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b089294c.css",
-    "static/js/main.22d0626a.js"
+    "static/js/main.e8e8d0f2.js"
   ]
 }
