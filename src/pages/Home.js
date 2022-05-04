@@ -17,7 +17,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: "80%",
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -74,8 +74,6 @@ const Home = () => {
           <a href="https://map.naver.com/v5/search/선유로88-8/address/">
             주소 : 주소
           </a>
-          <br></br>
-
           <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
         </div>
         <div className="info">
@@ -98,7 +96,7 @@ const Home = () => {
             </Modal>
           </div>
           <div>
-            <Button onClick={handleOpen2}>Open modal1</Button>
+            <Button onClick={handleOpen2}>Open modal2</Button>
             <Modal
               open={open2}
               onClose={handleClose2}
@@ -107,10 +105,10 @@ const Home = () => {
             >
               <Box sx={style}>
                 <Typography id="modal-modal-title2" variant="h6" component="h2">
-                  title1
+                  title2
                 </Typography>
                 <Typography id="modal-modal-description2" sx={{ mt: 2 }}>
-                  description1
+                  description2
                 </Typography>
               </Box>
             </Modal>

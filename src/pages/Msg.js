@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import TextField from "@mui/material/TextField";
 import "./msg.css";
 const { addComment } = require("../axios");
 
@@ -26,6 +26,32 @@ const Msg = () => {
       <h3>메시지 써주세요</h3>
       <div className="commentBox">
         <form>
+          <TextField
+            id="name"
+            label="이름"
+            variant="outlined"
+            required
+            className="name"
+            onChange={onChange}
+          />
+          <TextField
+            id="pw"
+            label="비밀번호"
+            variant="outlined"
+            required
+            className="pw"
+            onChange={onChange}
+          />
+          <TextField
+            multiline
+            id="comment"
+            label="글"
+            variant="outlined"
+            required
+            className="comment"
+            onChange={onChange}
+          />
+          {/* 
           <input
             required
             placeholder="이름"
@@ -47,7 +73,7 @@ const Msg = () => {
             onChange={onChange}
             rows="2"
             cols="33"
-          ></textarea>
+          ></textarea> */}
           <br></br>
           <button
             type="submit"
