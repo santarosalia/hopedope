@@ -8,13 +8,57 @@ import "./swiper.css";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 import { useState, useEffect } from "react";
 import * as React from "react";
+import PropTypes from "prop-types";
+import Backdrop from "@mui/material/Backdrop";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import Slide from "@mui/material/Slide";
+import Typography from "@mui/material/Typography";
+// web.cjs is required for IE11 support
+import { useSpring, animated } from "react-spring/web.cjs";
+
+const Fade = React.forwardRef(function Fade(props, ref) {
+  const { in: open, children, onEnter, onExited, ...other } = props;
+  const style = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: open ? 1 : 0 },
+    onStart: () => {
+      if (open && onEnter) {
+        onEnter();
+      }
+    },
+    onRest: () => {
+      if (!open && onExited) {
+        onExited();
+      }
+    },
+  });
+
+  return (
+    <animated.div ref={ref} style={style} {...other}>
+      {children}
+    </animated.div>
+  );
+});
+
+Fade.propTypes = {
+  children: PropTypes.element,
+  in: PropTypes.bool.isRequired,
+  onEnter: PropTypes.func,
+  onExited: PropTypes.func,
+};
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
 
 const { allMsg } = require("../axios");
 const Home = () => {
@@ -25,29 +69,9 @@ const Home = () => {
       setResult(results);
     });
   });
-  const Transition1 = React.forwardRef(function Transition1(props, ref) {
-    return <Slide direction="up" ref={ref} {...props} />;
-  });
-  const Transition2 = React.forwardRef(function Transition2(props, ref) {
-    return <Slide direction="up" ref={ref} {...props} />;
-  });
-  const [open1, setOpen1] = React.useState(false);
-  const [open2, setOpen2] = React.useState(false);
-
-  const handleClickOpen1 = () => {
-    setOpen1(true);
-  };
-
-  const handleClose1 = () => {
-    setOpen1(false);
-  };
-  const handleClickOpen2 = () => {
-    setOpen2(true);
-  };
-
-  const handleClose2 = () => {
-    setOpen2(false);
-  };
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   if (result == null)
     return (
@@ -91,49 +115,35 @@ const Home = () => {
         </div>
         <div className="info">
           <div>
-            <Button variant="outlined" onClick={handleClickOpen1}>
-              보기
-            </Button>
-            <Dialog
-              open={open1}
-              TransitionComponent={Transition1}
-              keepMounted
-              onClose={handleClose1}
-              aria-describedby="alert-dialog-slide-description1"
+            <Button onClick={handleOpen}>Open modal</Button>
+            <Modal
+              aria-labelledby="spring-modal-title"
+              aria-describedby="spring-modal-description"
+              open={open}
+              onClose={handleClose}
+              closeAfterTransition
+              BackdropComponent={Backdrop}
+              BackdropProps={{
+                timeout: 500,
+              }}
             >
-              <DialogTitle>{"title111"}</DialogTitle>
-              <DialogContent>
-                <DialogContentText id="alert-dialog-slide-description1">
-                  <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
-                </DialogContentText>
-              </DialogContent>
-              <DialogActions>
-                <Button onClick={handleClose1}>close</Button>
-              </DialogActions>
-            </Dialog>
+              <Fade in={open}>
+                <Box sx={style}>
+                  <Typography
+                    id="spring-modal-title"
+                    variant="h6"
+                    component="h2"
+                  >
+                    Text in a modal
+                  </Typography>
+                  <Typography id="spring-modal-description" sx={{ mt: 2 }}>
+                    Duis mollis, est non commodo luctus, nisi erat porttitor
+                    ligula.
+                  </Typography>
+                </Box>
+              </Fade>
+            </Modal>
           </div>
-          {/* <div>
-            <Button variant="outlined" onClick={handleClickOpen2}>
-              보기
-            </Button>
-            <Dialog
-              open={open2}
-              TransitionComponent={Transition2}
-              keepMounted
-              onClose={handleClose2}
-              aria-describedby="alert-dialog-slide-description2"
-            >
-              <DialogTitle>{"title222"}</DialogTitle>
-              <DialogContent>
-                <DialogContentText id="alert-dialog-slide-description2">
-                  <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
-                </DialogContentText>
-              </DialogContent>
-              <DialogActions>
-                <Button onClick={handleClose2}>close</Button>
-              </DialogActions>
-            </Dialog>
-          </div> */}
         </div>
 
         <div>
