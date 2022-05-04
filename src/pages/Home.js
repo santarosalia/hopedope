@@ -8,48 +8,10 @@ import "./swiper.css";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 import { useState, useEffect } from "react";
 import * as React from "react";
-import PropTypes from "prop-types";
-import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import {
-  useSpring,
-  animated,
-} from "react-spring/node_modules/@react-spring/web/dist/react-spring-web.cjs";
-
-const Fade = React.forwardRef(function Fade(props, ref) {
-  const { in: open, children, onEnter, onExited, ...other } = props;
-  const style = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: open ? 1 : 0 },
-    onStart: () => {
-      if (open && onEnter) {
-        onEnter();
-      }
-    },
-    onRest: () => {
-      if (!open && onExited) {
-        onExited();
-      }
-    },
-  });
-
-  return (
-    <animated.div ref={ref} style={style} {...other}>
-      {children}
-    </animated.div>
-  );
-});
-
-Fade.propTypes = {
-  children: PropTypes.element,
-  in: PropTypes.bool.isRequired,
-  onEnter: PropTypes.func,
-  onExited: PropTypes.func,
-};
-
+import Modal from "@mui/material/Modal";
 const style = {
   position: "absolute",
   top: "50%",
@@ -61,19 +23,20 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-
 const { allMsg } = require("../axios");
 const Home = () => {
   const [result, setResult] = useState(null);
-
+  const [open1, setOpen1] = React.useState(false);
+  const handleOpen1 = () => setOpen1(true);
+  const handleClose1 = () => setOpen1(false);
+  const [open2, setOpen2] = React.useState(false);
+  const handleOpen2 = () => setOpen2(true);
+  const handleClose2 = () => setOpen2(false);
   useEffect(() => {
     allMsg().then((results) => {
       setResult(results);
     });
   });
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
 
   if (result == null)
     return (
@@ -117,33 +80,39 @@ const Home = () => {
         </div>
         <div className="info">
           <div>
-            <Button onClick={handleOpen}>Open modal</Button>
+            <Button onClick={handleOpen1}>Open modal1</Button>
             <Modal
-              aria-labelledby="spring-modal-title"
-              aria-describedby="spring-modal-description"
-              open={open}
-              onClose={handleClose}
-              closeAfterTransition
-              BackdropComponent={Backdrop}
-              BackdropProps={{
-                timeout: 500,
-              }}
+              open={open1}
+              onClose={handleClose1}
+              aria-labelledby="modal-modal-title1"
+              aria-describedby="modal-modal-description1"
             >
-              <Fade in={open}>
-                <Box sx={style}>
-                  <Typography
-                    id="spring-modal-title"
-                    variant="h6"
-                    component="h2"
-                  >
-                    Text in a modal
-                  </Typography>
-                  <Typography id="spring-modal-description" sx={{ mt: 2 }}>
-                    Duis mollis, est non commodo luctus, nisi erat porttitor
-                    ligula.
-                  </Typography>
-                </Box>
-              </Fade>
+              <Box sx={style}>
+                <Typography id="modal-modal-title1" variant="h6" component="h2">
+                  title1
+                </Typography>
+                <Typography id="modal-modal-description1" sx={{ mt: 2 }}>
+                  description1
+                </Typography>
+              </Box>
+            </Modal>
+          </div>
+          <div>
+            <Button onClick={handleOpen2}>Open modal1</Button>
+            <Modal
+              open={open2}
+              onClose={handleClose2}
+              aria-labelledby="modal-modal-title2"
+              aria-describedby="modal-modal-description2"
+            >
+              <Box sx={style}>
+                <Typography id="modal-modal-title2" variant="h6" component="h2">
+                  title1
+                </Typography>
+                <Typography id="modal-modal-description2" sx={{ mt: 2 }}>
+                  description1
+                </Typography>
+              </Box>
             </Modal>
           </div>
         </div>
