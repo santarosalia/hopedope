@@ -21,6 +21,7 @@
   width: 80%;
   height: 10vh;
   margin: 0 auto;
+  line-height: 10vh;
 }
 .address a {
   text-align: center;
