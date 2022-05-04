@@ -14,7 +14,10 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { useSpring, animated } from "react-spring";
+import {
+  useSpring,
+  animated,
+} from "react-spring/node_modules/@react-spring/web/dist/react-spring-web.cjs";
 
 const Fade = React.forwardRef(function Fade(props, ref) {
   const { in: open, children, onEnter, onExited, ...other } = props;
