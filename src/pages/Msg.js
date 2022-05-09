@@ -13,7 +13,10 @@ const Msg = () => {
   const { name, comment, pw } = inputValue;
 
   const onChange = (e) => {
-    const { className, value } = e.target;
+    const { className, value, id } = e.target;
+    console.log(className);
+    console.log(value);
+    console.log(id);
     const nextInputs = {
       ...inputValue,
       [className]: value,
@@ -51,7 +54,6 @@ const Msg = () => {
             id="comment"
             label="글"
             variant="outlined"
-            type=""
             required
             className="comment"
             onChange={onChange}
