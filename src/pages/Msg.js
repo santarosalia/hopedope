@@ -19,6 +19,9 @@ const Msg = () => {
       [className]: value,
     };
     setInputValue(nextInputs);
+    console.log(name);
+    console.log(pw);
+    console.log(comment);
   };
 
   return (
@@ -39,6 +42,7 @@ const Msg = () => {
             label="비밀번호"
             variant="outlined"
             required
+            type="password"
             className="pw"
             onChange={onChange}
           />
@@ -47,6 +51,7 @@ const Msg = () => {
             id="comment"
             label="글"
             variant="outlined"
+            type=""
             required
             className="comment"
             onChange={onChange}
