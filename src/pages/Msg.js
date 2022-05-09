@@ -13,18 +13,13 @@ const Msg = () => {
   const { name, comment, pw } = inputValue;
 
   const onChange = (e) => {
-    const { className, value, id } = e.target;
-    console.log(className);
-    console.log(value);
-    console.log(id);
+    const { value, id } = e.target;
+
     const nextInputs = {
       ...inputValue,
-      [className]: value,
+      [id]: value,
     };
     setInputValue(nextInputs);
-    console.log(name);
-    console.log(pw);
-    console.log(comment);
   };
 
   return (
