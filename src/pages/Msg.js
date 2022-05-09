@@ -81,7 +81,7 @@ const Msg = () => {
           ></textarea> */}
           <br></br>
           <button
-            type="submit"
+            type="button"
             onClick={() =>
               addComment(
                 inputValue.name,
