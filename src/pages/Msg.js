@@ -20,6 +20,9 @@ const Msg = () => {
       [id]: value,
     };
     setInputValue(nextInputs);
+    console.log(inputValue.name);
+    console.log(inputValue.pw);
+    console.log(inputValue.comment);
   };
 
   return (
@@ -79,7 +82,13 @@ const Msg = () => {
           <br></br>
           <button
             type="submit"
-            onClick={() => addComment(name, comment, pw).then()}
+            onClick={() =>
+              addComment(
+                inputValue.name,
+                inputValue.comment,
+                inputValue.pw
+              ).then()
+            }
           >
             등록
           </button>
