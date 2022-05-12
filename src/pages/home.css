@@ -38,8 +38,9 @@
 .info div {
   width: 50%;
   margin: 0 auto;
+  float: left;
 }
 .info {
   width: 100%;
-  float: left;
+  height: 300px;
 }

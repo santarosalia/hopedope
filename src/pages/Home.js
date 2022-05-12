@@ -72,7 +72,7 @@ const Home = () => {
 
         <div className="address">
           <a href="https://map.naver.com/v5/search/선유로88-8/address/">
-            주소 : 주소
+            주소 : 선유로 88-8
           </a>
         </div>
         <div className="info">
