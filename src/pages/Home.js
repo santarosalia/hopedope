@@ -74,7 +74,6 @@ const Home = () => {
           <a href="https://map.naver.com/v5/search/선유로88-8/address/">
             주소 : 주소
           </a>
-          <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
         </div>
         <div className="info">
           <div>
@@ -90,7 +89,7 @@ const Home = () => {
                   title1
                 </Typography>
                 <Typography id="modal-modal-description1" sx={{ mt: 2 }}>
-                  description1
+                  <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
                 </Typography>
               </Box>
             </Modal>

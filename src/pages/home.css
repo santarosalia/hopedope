@@ -7,13 +7,17 @@
   height: 10vh;
   line-height: 10vh;
 }
-#react-naver-map {
+/* #react-naver-map {
   border-radius: 15px;
-}
+} */
 .naverMap {
   text-align: center;
   width: 80%;
-  border-radius: 15px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
   margin: 0 auto;
 }
 .address {
@@ -22,9 +26,18 @@
   height: 10vh;
   margin: 0 auto;
   line-height: 10vh;
+  border-top: none;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 .address a {
   text-align: center;
   text-decoration: none;
   color: #000;
+}
+.info div {
+  width: 100%;
+}
+.info {
+  float: left;
 }
