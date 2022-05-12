@@ -88,7 +88,7 @@ const Msg = () => {
                 inputValue.comment,
                 inputValue.pw
               ).then(() => {
-                location.reload();
+                Location.reload();
               })
             }
           >
