@@ -87,7 +87,9 @@ const Msg = () => {
                 inputValue.name,
                 inputValue.comment,
                 inputValue.pw
-              ).then()
+              ).then(() => {
+                location.reload();
+              })
             }
           >
             등록
