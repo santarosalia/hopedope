@@ -33,7 +33,7 @@ const Home = () => {
   const handleOpen2 = () => setOpen2(true);
   const handleClose2 = () => setOpen2(false);
   const clipboardCopy = (e) => {
-    navigator.clipboard.writeText(e.target.text());
+    navigator.clipboard.writeText(e.target.value);
   };
   useEffect(() => {
     allMsg().then((results) => {
@@ -95,7 +95,9 @@ const Home = () => {
                 </Typography>
                 <Typography id="modal-modal-description1" sx={{ mt: 2 }}>
                   <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
-                  <p onClick={clipboardCopy}>텍스트</p>
+                  <p value="텍스트복사" onClick={clipboardCopy}>
+                    복사
+                  </p>
                 </Typography>
               </Box>
             </Modal>
