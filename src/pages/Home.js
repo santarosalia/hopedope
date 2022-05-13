@@ -95,7 +95,7 @@ const Home = () => {
                 </Typography>
                 <Typography id="modal-modal-description1" sx={{ mt: 2 }}>
                   <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
-                  <p value="텍스트복사" onClick={clipboardCopy}>
+                  <p value={"텍스트"} onClick={clipboardCopy}>
                     복사
                   </p>
                 </Typography>
