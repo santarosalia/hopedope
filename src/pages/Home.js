@@ -33,7 +33,7 @@ const Home = () => {
   const handleOpen2 = () => setOpen2(true);
   const handleClose2 = () => setOpen2(false);
   const clipboardCopy = (e) => {
-    navigator.clipboard.writeText(e.target.value);
+    navigator.clipboard.writeText(e.target.text());
   };
   useEffect(() => {
     allMsg().then((results) => {
