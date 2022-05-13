@@ -32,6 +32,9 @@ const Home = () => {
   const [open2, setOpen2] = React.useState(false);
   const handleOpen2 = () => setOpen2(true);
   const handleClose2 = () => setOpen2(false);
+  const clipboardCopy = (e) => {
+    navigator.clipboard.writeText(e.target.value);
+  };
   useEffect(() => {
     allMsg().then((results) => {
       setResult(results);
@@ -75,6 +78,8 @@ const Home = () => {
             주소 : 선유로 88-8
           </a>
         </div>
+        <br></br>
+        <br></br>
         <div className="info">
           <div>
             <Button onClick={handleOpen1}>Open modal1</Button>
@@ -90,6 +95,7 @@ const Home = () => {
                 </Typography>
                 <Typography id="modal-modal-description1" sx={{ mt: 2 }}>
                   <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
+                  <p onClick={clipboardCopy}>텍스트</p>
                 </Typography>
               </Box>
             </Modal>
