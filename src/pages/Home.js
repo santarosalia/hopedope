@@ -52,6 +52,7 @@ const Home = () => {
           <p>{item.msg}</p>
         </SwiperSlide>;
       });
+      console.log(resultList);
       return resultList;
     };
 
