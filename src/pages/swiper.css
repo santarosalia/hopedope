@@ -27,7 +27,6 @@ body {
   background-size: cover;
   width: 300px;
   height: 300px;
-  background-image: url("/public/img/letter.png");
 }
 .swiper-slide div {
   margin: auto;
@@ -46,4 +45,7 @@ body {
 .swiper-slide img {
   display: block;
   width: 100%;
+}
+.msgSlider {
+  background-image: url("/public/img/letter.png");
 }
