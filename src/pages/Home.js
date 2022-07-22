@@ -43,7 +43,6 @@ const Home = () => {
   }, []);
 
   const Myswiper = () => {
-    console.log("slider");
     if (result == null) return;
 
     const MySlider = () => {
@@ -75,7 +74,12 @@ const Home = () => {
           className="mySwiper"
         >
           {/* style={{ backgroundColor: "white" }} */}
-          <MySlider />
+          <div
+            className="swiper-wrapper"
+            style={{ transform: translate3d("0px", "0px", "0px") }}
+          >
+            <MySlider />
+          </div>
         </Swiper>
       </>
     );
