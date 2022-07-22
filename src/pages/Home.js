@@ -41,7 +41,7 @@ const Home = () => {
     allMsg().then((results) => {
       setResult(results);
     });
-  });
+  }, []);
 
   const Myswiper = () => {
     console.log("123");
