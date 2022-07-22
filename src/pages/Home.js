@@ -43,7 +43,7 @@ const Home = () => {
     });
   });
 
-  const swiper = () => {
+  const Myswiper = () => {
     return (
       <>
         <Swiper
@@ -154,12 +154,91 @@ const Home = () => {
 
   if (result == null)
     return (
-      <div>
-        <h2>loading...</h2>
-        <img
-          style={{ width: "100%" }}
-          src="https://raw.githubusercontent.com/santarosalia/hopedope/master/public/img/loading.gif"
-        ></img>
+      <div className="home">
+        <div className="body">
+          <div className="box">text</div>
+          <br></br>
+          <br></br>
+          <div id="react-naver-map" className="naverMap">
+            <RenderAfterNavermapsLoaded ncpClientId={"chnhlyto0x"}>
+              <NaverMap
+                id="react-naver-map"
+                style={{
+                  width: "100%",
+                  height: "250px",
+                }}
+                defaultCenter={{ lat: 37.521602, lng: 126.890874 }}
+                defaultZoom={15}
+              >
+                <Marker position={{ lat: 37.521602, lng: 126.890874 }} />
+              </NaverMap>
+            </RenderAfterNavermapsLoaded>
+          </div>
+
+          <div className="address">
+            <a href="https://map.naver.com/v5/search/선유로88-8/address/">
+              주소 : 선유로 88-8
+            </a>
+          </div>
+          <br></br>
+          <br></br>
+          <div className="info">
+            <div>
+              <Button onClick={handleOpen1}>Open modal1</Button>
+              <Modal
+                open={open1}
+                onClose={handleClose1}
+                aria-labelledby="modal-modal-title1"
+                aria-describedby="modal-modal-description1"
+              >
+                <Box sx={style}>
+                  <Typography
+                    id="modal-modal-title1"
+                    variant="h6"
+                    component="h2"
+                  >
+                    title1
+                  </Typography>
+                  <Typography id="modal-modal-description1" sx={{ mt: 2 }}>
+                    <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
+                    <p className={"텍스트"} onClick={clipboardCopy}>
+                      복사
+                    </p>
+                  </Typography>
+                </Box>
+              </Modal>
+            </div>
+            <div>
+              <Button onClick={handleOpen2}>Open modal2</Button>
+              <Modal
+                open={open2}
+                onClose={handleClose2}
+                aria-labelledby="modal-modal-title2"
+                aria-describedby="modal-modal-description2"
+              >
+                <Box sx={style}>
+                  <Typography
+                    id="modal-modal-title2"
+                    variant="h6"
+                    component="h2"
+                  >
+                    title2
+                  </Typography>
+                  <Typography id="modal-modal-description2" sx={{ mt: 2 }}>
+                    description2
+                  </Typography>
+                </Box>
+              </Modal>
+            </div>
+          </div>
+          <div className="loading">
+            <h2>loading...</h2>
+            <img
+              style={{ width: "100%" }}
+              src="https://raw.githubusercontent.com/santarosalia/hopedope/master/public/img/loading.gif"
+            ></img>
+          </div>
+        </div>
       </div>
     );
   return (
@@ -234,7 +313,7 @@ const Home = () => {
         </div>
 
         <div className="swiper">
-          <swiper />
+          <Myswiper />
         </div>
       </div>
     </div>
