@@ -76,7 +76,7 @@ const Home = () => {
           {/* style={{ backgroundColor: "white" }} */}
           <div
             className="swiper-wrapper"
-            style={{ transform: translate3d("0px", "0px", "0px") }}
+            style={{ transform: "translate3d(0px, 0px, 0px)" }}
           >
             <MySlider />
           </div>
