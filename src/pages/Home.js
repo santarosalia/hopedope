@@ -44,6 +44,7 @@ const Home = () => {
   });
 
   const Myswiper = () => {
+    console.log("123");
     return (
       <>
         <Swiper
