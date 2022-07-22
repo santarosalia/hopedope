@@ -47,7 +47,7 @@ const Home = () => {
 
     const MySlider = () => {
       return result.map((item) => (
-        <SwiperSlide>
+        <SwiperSlide className="msgSlider">
           <div>
             <p>{item.msg}</p>
           </div>
@@ -247,7 +247,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div id="swiper">
+        <div id="msgSwiper">
           <Myswiper />
         </div>
       </div>
