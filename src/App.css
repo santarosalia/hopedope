@@ -65,6 +65,7 @@ footer {
 @media (min-width: 768px) {
   .App {
     width: 400px;
+    margin: 0 auto;
   }
 }
 
