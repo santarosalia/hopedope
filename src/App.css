@@ -3,7 +3,6 @@
   background-color: #cdbad9;
   background-image: url("https://www.transparenttextures.com/patterns/nice-snow.png");
   height: 100%;
-  min-width: 320px;
 }
 header {
   padding-top: 5vh;
@@ -61,4 +60,13 @@ footer {
   background-color: white;
   height: 10vh;
   width: 100%;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (max-width: 1024px) {
+  .App {
+    width: 400px;
+  }
 }
