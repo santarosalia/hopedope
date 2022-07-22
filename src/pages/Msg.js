@@ -34,7 +34,6 @@ const Msg = () => {
             id="name"
             label="이름"
             variant="outlined"
-            required
             className="name"
             onChange={onChange}
           />
@@ -42,7 +41,6 @@ const Msg = () => {
             id="pw"
             label="비밀번호"
             variant="outlined"
-            required
             type="password"
             className="pw"
             onChange={onChange}
@@ -52,7 +50,6 @@ const Msg = () => {
             id="comment"
             label="글"
             variant="outlined"
-            required
             className="comment"
             onChange={onChange}
           />
@@ -84,9 +81,9 @@ const Msg = () => {
             type="button"
             onClick={() => {
               if (
-                inputValue.name == null ||
-                inputValue.comment == null ||
-                inputValue.pw == null
+                inputValue.name == "" ||
+                inputValue.comment == "" ||
+                inputValue.pw == ""
               ) {
                 alert("빈칸은 없어야 합니다!");
                 return;
