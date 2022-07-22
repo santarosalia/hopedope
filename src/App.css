@@ -63,10 +63,10 @@ footer {
 }
 
 @media (min-width: 768px) {
-}
-
-@media (max-width: 1024px) {
   .App {
     width: 400px;
   }
+}
+
+@media (max-width: 1024px) {
 }
