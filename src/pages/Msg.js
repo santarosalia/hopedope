@@ -82,15 +82,23 @@ const Msg = () => {
           <br></br>
           <button
             type="button"
-            onClick={() =>
+            onClick={() => {
+              if (
+                inputValue.name == null ||
+                inputValue.comment == null ||
+                inputValue.pw == null
+              ) {
+                alert("빈칸은 없어야 합니다!");
+                return;
+              }
               addComment(
                 inputValue.name,
                 inputValue.comment,
                 inputValue.pw
               ).then(() => {
                 window.location.reload();
-              })
-            }
+              });
+            }}
           >
             등록
           </button>
