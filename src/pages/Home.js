@@ -46,12 +46,12 @@ const Home = () => {
     console.log("slider");
     if (result == null) return;
     const MySlider = () => {
-      const resultList = result.map((item) => {
+      const resultList = result.map((item) => (
         <SwiperSlide>
           <h4>{item.name}</h4>
           <p>{item.msg}</p>
-        </SwiperSlide>;
-      });
+        </SwiperSlide>
+      ));
       console.log(resultList);
       return resultList;
     };
