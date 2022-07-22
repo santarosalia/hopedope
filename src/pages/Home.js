@@ -44,7 +44,16 @@ const Home = () => {
   }, []);
 
   const Myswiper = () => {
-    console.log("123");
+    const MySlider = () => {
+      const resultList = result.map((item) => {
+        <SwiperSlide>
+          <h4>{item.name}</h4>
+          <p>{item.msg}</p>
+        </SwiperSlide>;
+      });
+      return resultList;
+    };
+
     return (
       <>
         <Swiper
@@ -65,89 +74,7 @@ const Home = () => {
           className="mySwiper"
         >
           {/* style={{ backgroundColor: "white" }} */}
-
-          <SwiperSlide>
-            <div>
-              <h4>{result[0].name}</h4>
-              <p>{result[0].msg}</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[1].name}</h4>
-            <p>{result[1].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[2].name}</h4>
-            <p>{result[2].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[3].name}</h4>
-            <p>{result[3].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[4].name}</h4>
-            <p>{result[4].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[5].name}</h4>
-            <p>{result[5].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[6].name}</h4>
-            <p>{result[6].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[7].name}</h4>
-            <p>{result[7].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[8].name}</h4>
-            <p>{result[8].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[9].name}</h4>
-            <p>{result[9].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[10].name}</h4>
-            <p>{result[10].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[11].name}</h4>
-            <p>{result[11].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[12].name}</h4>
-            <p>{result[12].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[13].name}</h4>
-            <p>{result[13].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[14].name}</h4>
-            <p>{result[14].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[15].name}</h4>
-            <p>{result[15].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[16].name}</h4>
-            <p>{result[16].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[17].name}</h4>
-            <p>{result[17].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[18].name}</h4>
-            <p>{result[18].msg}</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h4>{result[19].name}</h4>
-            <p>{result[19].msg}</p>
-          </SwiperSlide>
+          <MySlider />
         </Swiper>
       </>
     );
