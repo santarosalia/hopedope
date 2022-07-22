@@ -29,8 +29,10 @@ body {
   height: 300px;
   background-image: url("/public/img/letter.png");
 }
-.swiper-slide h4 {
-  margin-top: 70px;
+.swiper-slide div {
+  width: 150px;
+  height: 200px;
+  margin-top: 60px;
 }
 
 .swiper-slide img {

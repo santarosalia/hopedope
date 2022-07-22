@@ -48,8 +48,10 @@ const Home = () => {
     const MySlider = () => {
       return result.map((item) => (
         <SwiperSlide>
-          <h4>{item.name}</h4>
-          <p>{item.msg}</p>
+          <div>
+            <p>{item.msg}</p>
+          </div>
+          <h4>from. {item.name}</h4>
         </SwiperSlide>
       ));
     };
