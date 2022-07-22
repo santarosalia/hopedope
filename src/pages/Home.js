@@ -242,7 +242,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="swiper">
+        <div id="swiper">
           <Myswiper />
         </div>
       </div>
