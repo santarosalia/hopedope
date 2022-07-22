@@ -44,6 +44,8 @@ const Home = () => {
 
   const Myswiper = () => {
     const MySlider = () => {
+      console.log("slider");
+      if (result == null) return;
       const resultList = result.map((item) => {
         <SwiperSlide>
           <h4>{item.name}</h4>
