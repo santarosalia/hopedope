@@ -45,16 +45,13 @@ const Home = () => {
   const Myswiper = () => {
     console.log("slider");
     if (result == null) return;
-    const MySlider = () => {
-      const resultList = result.map((item) => (
-        <SwiperSlide>
-          <h4>{item.name}</h4>
-          <p>{item.msg}</p>
-        </SwiperSlide>
-      ));
 
-      return resultList;
-    };
+    const ResultList = result.map((item) => (
+      <SwiperSlide>
+        <h4>{item.name}</h4>
+        <p>{item.msg}</p>
+      </SwiperSlide>
+    ));
 
     return (
       <>
@@ -76,7 +73,7 @@ const Home = () => {
           className="mySwiper"
         >
           {/* style={{ backgroundColor: "white" }} */}
-          <MySlider />
+          <ResultList />
         </Swiper>
       </>
     );
