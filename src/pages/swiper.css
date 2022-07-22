@@ -31,7 +31,7 @@ body {
 .swiper-slide div {
   margin: auto;
   width: 150px;
-  height: 180px;
+  height: 160px;
   margin-top: 60px;
 }
 .swiper-slide h4 {
@@ -46,6 +46,6 @@ body {
   display: block;
   width: 100%;
 }
-.msgSlider {
+#msgSwiper .swiper-slide {
   background-image: url("/public/img/letter.png");
 }
