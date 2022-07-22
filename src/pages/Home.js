@@ -34,7 +34,6 @@ const Home = () => {
   const handleOpen2 = () => setOpen2(true);
   const handleClose2 = () => setOpen2(false);
   const clipboardCopy = (e) => {
-    console.log(e);
     navigator.clipboard.writeText(e.target.className);
   };
   useEffect(() => {
@@ -45,13 +44,15 @@ const Home = () => {
 
   const Myswiper = () => {
     const MySlider = () => {
-      const resultList = result.map((item) => {
-        <SwiperSlide>
-          <h4>{item.name}</h4>
-          <p>{item.msg}</p>
-        </SwiperSlide>;
-      });
-      return resultList;
+      if (result != null) {
+        const resultList = result.map((item) => {
+          <SwiperSlide>
+            <h4>{item.name}</h4>
+            <p>{item.msg}</p>
+          </SwiperSlide>;
+        });
+        return resultList;
+      }
     };
 
     return (
