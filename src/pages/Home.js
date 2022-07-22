@@ -34,7 +34,7 @@ const Home = () => {
   const handleClose2 = () => setOpen2(false);
   const clipboardCopy = (e) => {
     console.log(e);
-    navigator.clipboard.writeText(e.name);
+    navigator.clipboard.writeText(e.target.className);
   };
   useEffect(() => {
     allMsg().then((results) => {
@@ -96,7 +96,7 @@ const Home = () => {
                 </Typography>
                 <Typography id="modal-modal-description1" sx={{ mt: 2 }}>
                   <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
-                  <p name={"텍스트"} onClick={clipboardCopy}>
+                  <p className={"텍스트"} onClick={clipboardCopy}>
                     복사
                   </p>
                 </Typography>
@@ -143,9 +143,12 @@ const Home = () => {
               className="mySwiper"
             >
               {/* style={{ backgroundColor: "white" }} */}
+
               <SwiperSlide>
-                <h4>{result[0].name}</h4>
-                <p>{result[0].msg}</p>
+                <div>
+                  <h4>{result[0].name}</h4>
+                  <p>{result[0].msg}</p>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
                 <h4>{result[1].name}</h4>
