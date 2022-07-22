@@ -49,7 +49,7 @@ const Home = () => {
       return result.map((item) => (
         <SwiperSlide className="msgSlider">
           <div>
-            <p>{item.msg}</p>
+            <span>{item.msg}</span>
           </div>
           <h4>from. {item.name}</h4>
         </SwiperSlide>
