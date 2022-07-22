@@ -40,7 +40,7 @@ const Home = () => {
     allMsg().then((results) => {
       setResult(results);
     });
-  }, [result]);
+  });
 
   const Myswiper = () => {
     const MySlider = () => {
