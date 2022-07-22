@@ -30,9 +30,13 @@ body {
   background-image: url("/public/img/letter.png");
 }
 .swiper-slide div {
+  margin: auto;
   width: 150px;
-  height: 200px;
+  height: 180px;
   margin-top: 60px;
+}
+.swiper-slide h4 {
+  text-align: left;
 }
 
 .swiper-slide img {
