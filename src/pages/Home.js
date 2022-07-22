@@ -40,19 +40,17 @@ const Home = () => {
     allMsg().then((results) => {
       setResult(results);
     });
-  }, []);
+  }, [result]);
 
   const Myswiper = () => {
     const MySlider = () => {
-      if (result != null) {
-        const resultList = result.map((item) => {
-          <SwiperSlide>
-            <h4>{item.name}</h4>
-            <p>{item.msg}</p>
-          </SwiperSlide>;
-        });
-        return resultList;
-      }
+      const resultList = result.map((item) => {
+        <SwiperSlide>
+          <h4>{item.name}</h4>
+          <p>{item.msg}</p>
+        </SwiperSlide>;
+      });
+      return resultList;
     };
 
     return (
