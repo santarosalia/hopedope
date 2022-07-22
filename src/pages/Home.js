@@ -40,7 +40,7 @@ const Home = () => {
     allMsg().then((results) => {
       setResult(results);
     });
-  });
+  }, []);
 
   const Myswiper = () => {
     console.log("slider");
@@ -52,7 +52,7 @@ const Home = () => {
           <p>{item.msg}</p>
         </SwiperSlide>
       ));
-      console.log(resultList);
+
       return resultList;
     };
 
