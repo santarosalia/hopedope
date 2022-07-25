@@ -48,3 +48,6 @@
 .msgSlider div {
   word-break: break-all;
 }
+.msgSlider div span {
+  line-height: 25px;
+}
