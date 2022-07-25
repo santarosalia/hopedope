@@ -29,7 +29,7 @@ const Msg = () => {
 
       let totalByte = 0;
       for (let i = 0; i < textLength; i++) {
-        const eachChar = text.charAth(i);
+        const eachChar = text.charAt(i);
         const uniChar = escape(eachChar);
         if (uniChar.length > 4) {
           //한글 : 2Byte
