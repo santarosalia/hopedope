@@ -61,7 +61,10 @@ const Msg = () => {
             variant="outlined"
             className="name"
             onChange={onChange}
+            size="small"
           />
+          <br></br>
+          <br></br>
           <TextField
             id="pw"
             label="비밀번호"
@@ -69,7 +72,10 @@ const Msg = () => {
             type="password"
             className="pw"
             onChange={onChange}
+            size="small"
           />
+          <br></br>
+          <br></br>
           <p>{currByte}/120 Bytes</p>
           <TextField
             multiline
@@ -78,6 +84,7 @@ const Msg = () => {
             variant="outlined"
             className="comment"
             onChange={onChange}
+            size="small"
           />
 
           <br></br>
