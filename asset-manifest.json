@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/hopedope/static/css/main.7965c06c.css",
+    "main.css": "/hopedope/static/css/main.6061e836.css",
     "main.js": "/hopedope/static/js/main.c3eb2bfe.js",
     "static/js/787.460ff9ff.chunk.js": "/hopedope/static/js/787.460ff9ff.chunk.js",
     "static/media/letter.png": "/hopedope/static/media/letter.ab3cd62f9480efdfa023.png",
     "index.html": "/hopedope/index.html",
-    "main.7965c06c.css.map": "/hopedope/static/css/main.7965c06c.css.map",
+    "main.6061e836.css.map": "/hopedope/static/css/main.6061e836.css.map",
     "main.c3eb2bfe.js.map": "/hopedope/static/js/main.c3eb2bfe.js.map",
     "787.460ff9ff.chunk.js.map": "/hopedope/static/js/787.460ff9ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7965c06c.css",
+    "static/css/main.6061e836.css",
     "static/js/main.c3eb2bfe.js"
   ]
 }
