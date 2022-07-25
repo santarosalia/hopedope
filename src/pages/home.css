@@ -49,5 +49,6 @@
   word-break: break-all;
 }
 .msgSlider div span {
-  line-height: 25px;
+  line-height: 28px;
+  overflow: hidden;
 }
