@@ -4,6 +4,8 @@ import "./msg.css";
 const { addComment } = require("../axios");
 
 const Msg = () => {
+  let beforeComment;
+  const maxByte = 120;
   const [inputValue, setInputValue] = useState({
     name: "",
     comment: "",
@@ -23,7 +25,6 @@ const Msg = () => {
     setInputValue(nextInputs);
 
     if (e.target.id == "comment") {
-      const maxByte = 100;
       const text = e.target.value;
       const textLength = text.length;
 
@@ -40,7 +41,12 @@ const Msg = () => {
         }
       }
       setCurrByte(totalByte);
-      console.log(currByte);
+
+      if (currByte > maxByte) {
+        alert("최대 글자수를 넘지 말아주세요!");
+
+        e.target.value = text.substring(0, textLength - 1);
+      }
     }
   };
 
@@ -64,6 +70,7 @@ const Msg = () => {
             className="pw"
             onChange={onChange}
           />
+          <p>{currByte}/120 Bytes</p>
           <TextField
             multiline
             id="comment"
@@ -72,29 +79,7 @@ const Msg = () => {
             className="comment"
             onChange={onChange}
           />
-          {/* 
-          <input
-            required
-            placeholder="이름"
-            className="name"
-            onChange={onChange}
-          ></input>
-          <input
-            required
-            placeholder="비밀번호"
-            className="pw"
-            onChange={onChange}
-            type="password"
-            maxLength={4}
-          ></input>
-          <br></br>
-          <textarea
-            placeholder="글"
-            className="comment"
-            onChange={onChange}
-            rows="2"
-            cols="33"
-          ></textarea> */}
+
           <br></br>
           <button
             type="button"
