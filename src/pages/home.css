@@ -47,8 +47,8 @@
 
 .msgSlider div {
   word-break: break-all;
+  overflow: hidden;
 }
 .msgSlider div span {
   line-height: 28px;
-  overflow: hidden;
 }
