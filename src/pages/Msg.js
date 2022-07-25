@@ -45,7 +45,7 @@ const Msg = () => {
       if (currByte > maxByte) {
         alert("최대 글자수를 넘지 말아주세요!");
 
-        e.target.value = text.substring(0, textLength - 1);
+        e.target.value = text.substring(0, textLength - 2);
       }
     }
   };
