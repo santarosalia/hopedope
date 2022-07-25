@@ -22,9 +22,8 @@ const App = () => {
         <Link to={"/about"}>소개</Link>
         <Link to={"/photo"}>사진</Link>
         <Link to={"/msg"}>방명록</Link>
-        <div className="snow-bg"></div>
       </header>
-
+      <div className="snow-bg"></div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
