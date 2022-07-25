@@ -47,4 +47,5 @@
 
 .msgSlider div {
   display: block;
+  overflow: auto;
 }
