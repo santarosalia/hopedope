@@ -46,6 +46,5 @@
 }
 
 .msgSlider div {
-  display: block;
-  overflow: auto;
+  word-break: break-all;
 }
