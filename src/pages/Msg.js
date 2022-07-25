@@ -39,7 +39,7 @@ const Msg = () => {
           totalByte += 1;
         }
       }
-      setCurrByte = totalByte;
+      setCurrByte(totalByte);
       console.log(currByte);
     }
   };
