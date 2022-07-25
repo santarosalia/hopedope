@@ -20,9 +20,7 @@ const Msg = () => {
       [id]: value,
     };
     setInputValue(nextInputs);
-    console.log(inputValue.name);
-    console.log(inputValue.pw);
-    console.log(inputValue.comment);
+    console.log(e);
   };
 
   return (
