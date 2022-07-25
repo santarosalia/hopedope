@@ -44,3 +44,7 @@
   width: 100%;
   height: 300px;
 }
+
+.msgSlider div {
+  display: block;
+}
