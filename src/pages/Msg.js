@@ -9,6 +9,7 @@ const Msg = () => {
     comment: "",
     pw: "",
   });
+  const [currByte, setCurrByte] = useState(0);
 
   const { name, comment, pw } = inputValue;
 
@@ -20,7 +21,27 @@ const Msg = () => {
       [id]: value,
     };
     setInputValue(nextInputs);
-    console.log(e);
+
+    if (e.target.id == "comment") {
+      const maxByte = 100;
+      const text = e.target.value;
+      const textLength = text.length;
+
+      let totalByte = 0;
+      for (let i = 0; i < textLength; i++) {
+        const eachChar = text.charAth(i);
+        const uniChar = escape(eachChar);
+        if (uniChar.length > 4) {
+          //한글 : 2Byte
+          totalByte += 2;
+        } else {
+          //영 특문 : 1Byte
+          totalByte += 1;
+        }
+      }
+      setCurrByte = totalByte;
+      console.log(currByte);
+    }
   };
 
   return (
