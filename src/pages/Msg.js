@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import "./msg.css";
+import { FormGroup } from "@mui/material";
 
 const { addComment } = require("../axios");
 // import { makeStyles } from "@mui/material/core";
 // import { height } from "@mui/system";
-import { FormGroup } from "@mui/material/FormGroup";
 
 // const useStyles = makeStyles(() => {
 //   textArea: {
