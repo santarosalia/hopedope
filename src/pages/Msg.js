@@ -5,6 +5,7 @@ import "./msg.css";
 const { addComment } = require("../axios");
 import { makeStyles } from "@material-ui/core/styles";
 import { height } from "@mui/system";
+import { FormGroup } from "@mui/material";
 
 const useStyles = makeStyles(() => {
   textArea: {
@@ -62,7 +63,23 @@ const Msg = () => {
     <div className="msg">
       <h3>메시지 써주세요</h3>
       <div className="commentBox">
-        <form>
+        <FormGroup
+          onSubmit={() => {
+            if (
+              inputValue.name == "" ||
+              inputValue.comment == "" ||
+              inputValue.pw == ""
+            ) {
+              alert("빈칸은 없어야 합니다!");
+              return;
+            }
+            addComment(inputValue.name, inputValue.comment, inputValue.pw).then(
+              () => {
+                window.location.reload();
+              }
+            );
+          }}
+        >
           <TextField
             id="name"
             label="이름"
@@ -96,29 +113,8 @@ const Msg = () => {
           />
 
           <br></br>
-          <button
-            type="button"
-            onClick={() => {
-              if (
-                inputValue.name == "" ||
-                inputValue.comment == "" ||
-                inputValue.pw == ""
-              ) {
-                alert("빈칸은 없어야 합니다!");
-                return;
-              }
-              addComment(
-                inputValue.name,
-                inputValue.comment,
-                inputValue.pw
-              ).then(() => {
-                window.location.reload();
-              });
-            }}
-          >
-            등록
-          </button>
-        </form>
+          <button type="submit">등록</button>
+        </FormGroup>
       </div>
     </div>
   );
