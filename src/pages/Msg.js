@@ -4,7 +4,6 @@ import "./msg.css";
 const { addComment } = require("../axios");
 
 const Msg = () => {
-  let beforeComment;
   const maxByte = 120;
   const [inputValue, setInputValue] = useState({
     name: "",
@@ -85,6 +84,7 @@ const Msg = () => {
             className="comment"
             onChange={onChange}
             size="small"
+            style={{ height: "200px" }}
           />
 
           <br></br>
