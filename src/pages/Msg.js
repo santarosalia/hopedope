@@ -1,9 +1,18 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import "./msg.css";
-const { addComment } = require("../axios");
 
+const { addComment } = require("../axios");
+import { makeStyles } from "@material-ui/core/styles";
+import { height } from "@mui/system";
+
+const useStyles = makeStyles(() => {
+  textArea: {
+    height: "200px";
+  }
+});
 const Msg = () => {
+  const classes = useStyles();
   const maxByte = 120;
   const [inputValue, setInputValue] = useState({
     name: "",
@@ -81,10 +90,9 @@ const Msg = () => {
             id="comment"
             label="글"
             variant="outlined"
-            className="comment"
+            className="classes.textArea"
             onChange={onChange}
             size="small"
-            style={{ height: "200px" }}
           />
 
           <br></br>
