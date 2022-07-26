@@ -3,7 +3,7 @@ import TextField from "@mui/material/TextField";
 import "./msg.css";
 
 const { addComment } = require("../axios");
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from "@mui/material-ui/core";
 import { height } from "@mui/system";
 import { FormGroup } from "@mui/material";
 
