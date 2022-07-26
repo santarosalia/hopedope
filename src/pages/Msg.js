@@ -3,17 +3,17 @@ import TextField from "@mui/material/TextField";
 import "./msg.css";
 
 const { addComment } = require("../axios");
-import { makeStyles } from "@mui/material/core";
+// import { makeStyles } from "@mui/material/core";
 import { height } from "@mui/system";
 import { FormGroup } from "@mui/material";
 
-const useStyles = makeStyles(() => {
-  textArea: {
-    height: "200px";
-  }
-});
+// const useStyles = makeStyles(() => {
+//   textArea: {
+//     height: "200px";
+//   }
+// });
 const Msg = () => {
-  const classes = useStyles();
+  // const classes = useStyles();
   const maxByte = 120;
   const [inputValue, setInputValue] = useState({
     name: "",
@@ -107,7 +107,7 @@ const Msg = () => {
             id="comment"
             label="글"
             variant="outlined"
-            className="classes.textArea"
+            className="comment"
             onChange={onChange}
             size="small"
           />
