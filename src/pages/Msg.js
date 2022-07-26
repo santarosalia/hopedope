@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import "./msg.css";
-import { FormGroup } from "@mui/material";
+import { Button, FormGroup } from "@mui/material";
 
 const { addComment } = require("../axios");
 // import { makeStyles } from "@mui/material/core";
@@ -113,7 +113,7 @@ const Msg = () => {
           />
 
           <br></br>
-          <button type="submit">등록</button>
+          <Button type="submit">등록</Button>
         </FormGroup>
       </div>
     </div>
