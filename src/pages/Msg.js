@@ -78,7 +78,7 @@ const Msg = () => {
     <div className="msg">
       <h3>메시지 써주세요</h3>
       <div className="commentBox">
-        <form onSubmit={handleSubmit}>
+        <form>
           <TextField
             id="name"
             label="이름"
@@ -114,7 +114,9 @@ const Msg = () => {
           />
 
           <br></br>
-          <button type="submit">등록</button>
+          <button type="button" onClick={handleSubmit}>
+            등록
+          </button>
         </form>
       </div>
     </div>
