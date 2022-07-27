@@ -59,27 +59,26 @@ const Msg = () => {
     }
   };
 
+  const handleSubmit = (e) => {
+    if (
+      inputValue.name == "" ||
+      inputValue.comment == "" ||
+      inputValue.pw == ""
+    ) {
+      alert("빈칸은 없어야 합니다!");
+      return;
+    }
+    console.log(e);
+    // addComment(inputValue.name, inputValue.comment, inputValue.pw).then(() => {
+    //   window.location.reload();
+    // });
+  };
+
   return (
     <div className="msg">
       <h3>메시지 써주세요</h3>
       <div className="commentBox">
-        <form
-          onSubmit={() => {
-            if (
-              inputValue.name == "" ||
-              inputValue.comment == "" ||
-              inputValue.pw == ""
-            ) {
-              alert("빈칸은 없어야 합니다!");
-              return;
-            }
-            addComment(inputValue.name, inputValue.comment, inputValue.pw).then(
-              () => {
-                window.location.reload();
-              }
-            );
-          }}
-        >
+        <form onSubmit={handleSubmit}>
           <TextField
             id="name"
             label="이름"
