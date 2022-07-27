@@ -114,7 +114,7 @@ const Msg = () => {
           />
 
           <br></br>
-          <Button type="submit">등록</Button>
+          <button type="submit">등록</button>
         </form>
       </div>
     </div>
