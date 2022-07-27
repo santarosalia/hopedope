@@ -68,6 +68,7 @@ const Msg = () => {
       alert("빈칸은 없어야 합니다!");
       return;
     }
+
     console.log(e);
     // addComment(inputValue.name, inputValue.comment, inputValue.pw).then(() => {
     //   window.location.reload();
