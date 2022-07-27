@@ -69,10 +69,9 @@ const Msg = () => {
       return;
     }
 
-    console.log(e);
-    // addComment(inputValue.name, inputValue.comment, inputValue.pw).then(() => {
-    //   window.location.reload();
-    // });
+    addComment(inputValue.name, inputValue.comment, inputValue.pw).then(() => {
+      window.location.reload();
+    });
   };
 
   return (
@@ -87,7 +86,7 @@ const Msg = () => {
             className="name"
             onChange={onChange}
             size="small"
-            style={{ imeMode: "auto" }}
+            style={{ imeMode: "active" }}
           />
           <br></br>
           <br></br>
@@ -111,7 +110,7 @@ const Msg = () => {
             className="comment"
             onChange={onChange}
             size="small"
-            style={{ imeMode: "auto" }}
+            style={{ imeMode: "active" }}
           />
 
           <br></br>
