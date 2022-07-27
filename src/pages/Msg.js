@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import "./msg.css";
-import { Button, FormGroup } from "@mui/material";
 
 const { addComment } = require("../axios");
 // import { makeStyles } from "@mui/material/core";
@@ -61,9 +60,9 @@ const Msg = () => {
 
   const handleSubmit = (e) => {
     if (
-      inputValue.name == "" ||
-      inputValue.comment == "" ||
-      inputValue.pw == ""
+      inputValue.name === "" ||
+      inputValue.comment === "" ||
+      inputValue.pw === ""
     ) {
       alert("빈칸은 없어야 합니다!");
       return;

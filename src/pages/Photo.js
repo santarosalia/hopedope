@@ -28,34 +28,64 @@ const Photo = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/img/1.jpg" />
+              <img
+                src="https://santarosalia.github.io/hopedope/img/1.jpg"
+                alt=""
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/img/2.jpg" />
+              <img
+                src="https://santarosalia.github.io/hopedope/img/2.jpg"
+                alt=""
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/img/3.jpg" />
+              <img
+                src="https://santarosalia.github.io/hopedope/img/3.jpg"
+                alt=""
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/img/4.jpg" />
+              <img
+                src="https://santarosalia.github.io/hopedope/img/4.jpg"
+                alt=""
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/img/5.jpg" />
+              <img
+                src="https://santarosalia.github.io/hopedope/img/5.jpg"
+                alt=""
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/img/6.jpg" />
+              <img
+                src="https://santarosalia.github.io/hopedope/img/6.jpg"
+                alt=""
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/img/7.jpg" />
+              <img
+                src="https://santarosalia.github.io/hopedope/img/7.jpg"
+                alt=""
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/img/8.jpg" />
+              <img
+                src="https://santarosalia.github.io/hopedope/img/8.jpg"
+                alt=""
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/img/9.jpg" />
+              <img
+                src="https://santarosalia.github.io/hopedope/img/9.jpg"
+                alt=""
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="https://santarosalia.github.io/hopedope/img/10.jpg" />
+              <img
+                src="https://santarosalia.github.io/hopedope/img/10.jpg"
+                alt=""
+              />
             </SwiperSlide>
           </Swiper>
         </>
