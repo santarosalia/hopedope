@@ -63,7 +63,7 @@ const Msg = () => {
     <div className="msg">
       <h3>메시지 써주세요</h3>
       <div className="commentBox">
-        <FormGroup
+        <form
           onSubmit={() => {
             if (
               inputValue.name == "" ||
@@ -114,7 +114,7 @@ const Msg = () => {
 
           <br></br>
           <Button type="submit">등록</Button>
-        </FormGroup>
+        </form>
       </div>
     </div>
   );
