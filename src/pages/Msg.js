@@ -87,6 +87,7 @@ const Msg = () => {
             className="name"
             onChange={onChange}
             size="small"
+            style={{ imeMode: "auto" }}
           />
           <br></br>
           <br></br>
@@ -110,6 +111,7 @@ const Msg = () => {
             className="comment"
             onChange={onChange}
             size="small"
+            style={{ imeMode: "auto" }}
           />
 
           <br></br>
