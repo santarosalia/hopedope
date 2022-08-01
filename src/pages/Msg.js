@@ -32,7 +32,7 @@ const Msg = () => {
     };
     setInputValue(nextInputs);
 
-    if (e.target.id == "comment") {
+    if (e.target.id === "comment") {
       const text = e.target.value;
       const textLength = text.length;
 

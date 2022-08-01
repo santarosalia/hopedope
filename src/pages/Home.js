@@ -132,7 +132,7 @@ const Home = () => {
                     variant="h6"
                     component="h2"
                   >
-                    title1
+                    모달 제목
                   </Typography>
                   <Typography id="modal-modal-description1" sx={{ mt: 2 }}>
                     <a href="tel:010-4050-0323">전화번호 : 전화번호</a>
@@ -171,6 +171,7 @@ const Home = () => {
             <img
               style={{ width: "100%" }}
               src="https://raw.githubusercontent.com/santarosalia/hopedope/master/public/img/loading.gif"
+              alt="loading"
             ></img>
           </div>
         </div>
