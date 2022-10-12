@@ -191,17 +191,17 @@ const Home = () => {
                 width: "100%",
                 height: "250px",
               }}
-              defaultCenter={{ lat: 37.521602, lng: 126.890874 }}
+              defaultCenter={{ lat: 37.518057, lng: 126.894831 }}
               defaultZoom={15}
             >
-              <Marker position={{ lat: 37.521602, lng: 126.890874 }} />
+              <Marker position={{ lat: 37.518057, lng: 126.894831 }} />
             </NaverMap>
           </RenderAfterNavermapsLoaded>
         </div>
 
         <div className="address">
           <a href="https://map.naver.com/v5/search/선유로88-8/address/">
-            주소 : 선유로 88-8
+            주소 : 문래역
           </a>
         </div>
         <br></br>
