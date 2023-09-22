@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <div className="App"
-    // style={{display : 'none'}}
+    style={{display : 'none'}}
     >
       <header className="header">
         <Link to={"/"}>Home</Link>
