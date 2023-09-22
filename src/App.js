@@ -16,7 +16,9 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App" style={{display : 'none'}}>
+    <div className="App"
+    // style={{display : 'none'}}
+    >
       <header className="header">
         <Link to={"/"}>Home</Link>
         <Link to={"/about"}>소개</Link>
