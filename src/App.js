@@ -11,7 +11,7 @@ const App = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.text =
-      'Kakao.init("7d350e6dfaeae1fb62dd5827979d4a88");Kakao.Link.createScrapButton({container: "#kakao-link-btn",requestUrl: "https://santarosalia.github.io/hopedope/",templateId: 75771,templateArgs: {THU: "https://raw.githubusercontent.com/santarosalia/hopedope/master/public/img/thumb.jpeg"}});';
+      'Kakao.init("8fafb9a47852b13c4cebf4a5d147535f");Kakao.Link.createScrapButton({container: "#kakao-link-btn",requestUrl: "https://santarosalia.github.io/hopedope/",templateId: 98774,templateArgs: {THU: "https://raw.githubusercontent.com/santarosalia/hopedope/master/public/hopedope.jpg"}});';
     document.body.appendChild(script);
   }, []);
 
